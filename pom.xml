@@ -12,6 +12,18 @@
 	</parent>
 	<name>PetClinic React</name>
 
+	<developers>
+		<developer>
+			<id>luigirsan1</id>
+			<name>Luis Giraldo Santiago</name>
+			<email>luigirsan1@alum.us.es</email>
+			<organization>PSG2</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+  	</developers>
+
 	<properties>
 
 		<!-- Generic properties -->
