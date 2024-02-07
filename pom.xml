@@ -22,7 +22,16 @@
 				<role>developer</role>
 			</roles>
 		</developer>
-  	</developers>
+		<developer>
+			<id>diemanane</id>
+			<name>Diego Manzanos Anento</name>
+			<email>diemanane@alum.us.es</email>
+			<organization>PSG2</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+  </developers>
 
 	<properties>
 
