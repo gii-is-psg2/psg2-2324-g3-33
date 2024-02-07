@@ -31,6 +31,15 @@
 				<role>developer</role>
 			</roles>
 		</developer>
+		<developer>
+			<id>alevarmun1</id>
+			<name>Alejandro Vargas Muñiz</name>
+			<email>alevarmun1@alum.us.es</email>
+			<organization>PSG2</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
   </developers>
 
 	<properties>
