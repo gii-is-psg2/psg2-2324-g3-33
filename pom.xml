@@ -40,6 +40,15 @@
 				<role>developer</role>
 			</roles>
 		</developer>
+		<developer>
+			<id>alesevbar</id>
+			<name>Alejandro Sevillano Barea</name>
+			<email>alesevbar@alum.us.es</email>
+			<organization>PSG2</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
   </developers>
 
 	<properties>
