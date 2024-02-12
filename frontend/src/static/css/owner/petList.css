@@ -108,6 +108,16 @@
     background-color: var(--blue-shadow-color);
 }
 
+.edit-visit-button-ocher{
+    border: 1px solid #B9935A;
+    color: #B9935A;
+}
+
+.edit-visit-button-ocher:hover{
+    color: white;
+    background-color: #B9935A;
+}
+
 .cancel-visit-button{
     border: 1px solid var(--main-red-color);
     color: var(--main-red-color);

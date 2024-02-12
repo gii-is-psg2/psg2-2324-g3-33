@@ -41,3 +41,30 @@
   background-color: var(--main-red-color) !important;
   box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
 }
+
+.caramel{
+  border: solid 2px #AE6938 !important;
+}
+
+.caramel:hover{
+  background-color: #AE6938 !important;
+  box-shadow: 0px 15px 20px rgba(169, 62, 0, 0.696);
+}
+
+.honey{
+  border: solid 2px #D29340 !important;
+}
+
+.honey:hover{
+  background-color: #D29340 !important;
+  box-shadow: 0px 15px 20px rgba(228, 83, 0, 0.696);
+}
+
+.brown{
+  border: solid 2px #6F4E37 !important;
+}
+
+.brown:hover{
+  background-color: #6F4E37 !important;
+  box-shadow: 0px 15px 20px rgb(100, 39, 4);
+}
