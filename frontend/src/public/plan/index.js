@@ -13,7 +13,7 @@ export default function PlanList() {
         </div>
         <div className="section-pricing">
           <div className="pricing-container">
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background: '#7B3F00'}}>
               <div className="title">
                 <div className="icon">
                   <FaPaperPlane color="white" />
@@ -50,7 +50,7 @@ export default function PlanList() {
               </div>
             </div>
             {/* END Col one */}
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background: '#654321'}}>
               <div className="title">
                 <div className="icon">
                   <ImAirplane color="white" />
@@ -89,7 +89,7 @@ export default function PlanList() {
               </div>
             </div>
             {/* END Col two */}
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background: '#8B4513'}}>
               <div className="title" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <div className="icon">
                   <BsFillRocketTakeoffFill color="white" />
