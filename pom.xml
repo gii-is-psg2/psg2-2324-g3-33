@@ -49,8 +49,16 @@
 				<role>developer</role>
 			</roles>
 		</developer>
+		<developer>
+			<id>albescsan1</id>
+			<name>Alberto Escobar Sánchez</name>
+			<email>albescsan1@alum.us.es</email>
+			<organization>PSG2</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
   </developers>
-
 	<properties>
 
 		<!-- Generic properties -->
