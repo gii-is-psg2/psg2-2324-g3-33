@@ -1,3 +1,7 @@
+body {
+  background-color: #85fc85 !important; 
+}
+
 .consultation-checkbox-container{
     display: flex;
     flex-direction: column;
@@ -38,7 +42,7 @@
 .checkbox-wrapper-10 .tgl *:after::selection,
 .checkbox-wrapper-10 .tgl *:before::selection,
 .checkbox-wrapper-10 .tgl + .tgl-btn::selection {
-  background: none;
+  background: none; 
 }
 
 .checkbox-wrapper-10 .tgl + .tgl-btn {
