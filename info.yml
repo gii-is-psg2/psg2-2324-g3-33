@@ -7,26 +7,22 @@ project:
       url: "https://github.com/gii-is-psg2/psg2-2324-psg2-2324-g3-33"
   members:
     member1:
-      name: "José María"
-      surname: "García"
-      githubUsername: "josemgarcia"
+      name: "Diego"
+      surname: "Manzanos"
+      githubUsername: "diemanane"
     member2:
-      name: "Jose Antonio"
-      surname: "Parejo"
-      githubUsername: "japarejo"
+      name: "Luis"
+      surname: "Giraldo"
+      githubUsername: "Luis-Giraldo-Santiago3"
     member3:
-      name: "Amador"
-      surname: "Durán"
-      githubUsername: "amador-duran-toro"
+      name: "Alejandro"
+      surname: "Sevillano"
+      githubUsername: "alesevbar"
     member4:
-      name: "Carlos"
-      surname: "Müller"
-      githubUsername: "cmullercejas"
+      name: "Alejandro"
+      surname: "Vargas"
+      githubUsername: "alevarmun1"
     member5:
-      name: "Lola"
-      surname: "De Acuña"
-      githubUsername: "loladacuna"
-    member6:
-      name: "Alfonso"
-      surname: "Márquez"
-      githubUsername: "alfedu"
+      name: "Alberto"
+      surname: "Escobar"
+      githubUsername: "Albertoescobarsanchez"
