@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { BsDot, BsFillRocketTakeoffFill } from "react-icons/bs";
-import { FaCheck, FaPaperPlane, FaTimes } from "react-icons/fa";
-import { ImAirplane } from "react-icons/im";
+import { BsDot, BsFillCarFrontFill, BsFillAirplaneEnginesFill } from "react-icons/bs";
+import { FaCheck, FaTimes } from "react-icons/fa";
+import { ImTruck } from "react-icons/im";
 import "../../static/css/pricing/pricingPage.css";
 
 export default function PricingPlan () {
@@ -59,7 +59,7 @@ export default function PricingPlan () {
             <div className="pricing-card text-center">
               <div className="title">
                 <div className="icon">
-                  <FaPaperPlane color="white" />
+                  <ImTruck color="white" />
                 </div>
                 <h2>BASIC</h2>
               </div>
@@ -101,7 +101,7 @@ export default function PricingPlan () {
             <div className="pricing-card text-center">
               <div className="title">
                 <div className="icon">
-                  <ImAirplane color="white" />
+                  <BsFillCarFrontFill color="white" />
                 </div>
                 <h2>GOLD</h2>
               </div>
@@ -153,7 +153,7 @@ export default function PricingPlan () {
                 }}
               >
                 <div className="icon">
-                  <BsFillRocketTakeoffFill color="white" />
+                  <BsFillAirplaneEnginesFill color="white" />
                 </div>
                 <h2>PLATINUM</h2>
               </div>
