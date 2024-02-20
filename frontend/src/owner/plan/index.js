@@ -56,7 +56,7 @@ export default function PricingPlan () {
         </div>
         <div className="section-pricing">
           <div className="pricing-container">
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background:  '#A52A2A' }}>
               <div className="title">
                 <div className="icon">
                   <FaPaperPlane color="white" />
@@ -98,7 +98,7 @@ export default function PricingPlan () {
                 )}
             </div>
             {/* END Col one */}
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background:  '#CD853F' }}>
               <div className="title">
                 <div className="icon">
                   <ImAirplane color="white" />
@@ -143,7 +143,7 @@ export default function PricingPlan () {
             
             </div>
             {/* END Col two */}
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background:  "#8B4513" }}>
               <div
                 className="title"
                 style={{
