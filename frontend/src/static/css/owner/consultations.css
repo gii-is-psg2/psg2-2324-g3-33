@@ -1,6 +1,3 @@
-body {
-  background-color: #85fc85 !important; 
-}
 
 .consultation-checkbox-container{
     display: flex;
@@ -95,7 +92,7 @@ body {
   position: absolute;
   line-height: 2em;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
   position: absolute;
   top: 0;
   left: 0;

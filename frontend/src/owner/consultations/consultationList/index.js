@@ -184,7 +184,7 @@ export default function OwnerConsultationList() {
           </Col>
         </Row>
         <Table className="mt-4">
-          <thead>
+          <thead className="table-success">
             <tr>
               <th>Title</th>
               <th>Status</th>
