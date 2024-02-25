@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.samples.petclinic.model.Person;
+import org.springframework.samples.petclinic.pet.PetHotelRoom;
 import org.springframework.samples.petclinic.clinic.Clinic;
 import org.springframework.samples.petclinic.user.User;
 
