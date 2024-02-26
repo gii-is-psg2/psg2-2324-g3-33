@@ -37,9 +37,7 @@ import TicketListAdmin from "./admin/consultations/TicketListAdmin";
 import ConsultationEditAdmin from "./admin/consultations/ConsultationEditAdmin";
 import SwaggerDocs from "./public/swagger";
 import ClinicsList from "./clinicOwner/clinicsList"
-import PetHotelRoomList from "./petHotelRooms";
 import EditClinic from "./clinicOwner/clinicEdit"
-import EditPetHotelRoom from "./petHotelRooms/editroom";
 import OwnerListClinicOwner from "./clinicOwner/ownersList"
 import ClinicOwnerListAdmin from "./admin/clinicOwners/ClinicOwnerListAdmin";
 import ClinicOwnerEditAdmin from "./admin/clinicOwners/ClinicOwnerEditAdmin";
@@ -86,9 +84,7 @@ function App() {
           <Route path="/owners" exact={true} element={<PrivateRoute><OwnerListAdmin /></PrivateRoute>} />
           <Route path="/owners/:id" exact={true} element={<PrivateRoute><OwnerEditAdmin /></PrivateRoute>} />
           <Route path="/clinics" exact={true} element={<PrivateRoute><ClinicListAdmin /></PrivateRoute>} />
-          <Route path="/pethotelRooms" exact={true} element={<PrivateRoute><PetHotelRoomList /></PrivateRoute>} />
           <Route path="/clinics/:id" exact={true} element={<PrivateRoute><EditClinic /></PrivateRoute>} />
-          <Route path="/pethotelRooms/:id" exact={true} element={<PrivateRoute><EditPetHotelRoom /></PrivateRoute>} />
           <Route path="/clinicOwners" exact={true} element={<PrivateRoute><ClinicOwnerListAdmin /></PrivateRoute>} />
           <Route path="/clinicOwners/:id" exact={true} element={<PrivateRoute><ClinicOwnerEditAdmin /></PrivateRoute>} />
           <Route path="/pets" exact={true} element={<PrivateRoute><PetListAdmin /></PrivateRoute>} />
@@ -131,9 +127,7 @@ function App() {
         <>
           <Route path="/owners" exact={true} element={<PrivateRoute><OwnerListClinicOwner /></PrivateRoute>} />
           <Route path="/clinics" exact={true} element={<PrivateRoute><ClinicsList /></PrivateRoute>} />
-          <Route path="/pethotelRooms" exact={true} element={<PrivateRoute><PetHotelRoomList /></PrivateRoute>} />
           <Route path="/clinics/:id" exact={true} element={<PrivateRoute><EditClinic /></PrivateRoute>} />
-          <Route path="/pethotelRooms/:id" exact={true} element={<PrivateRoute><EditPetHotelRoom /></PrivateRoute>} />
           <Route path="/consultations" exact={true} element={<PrivateRoute><ConsultationListClinicOwner /></PrivateRoute>} />
           <Route path="/consultations/:id" exact={true} element={<PrivateRoute><ConsultationEditClinicOwner /></PrivateRoute>} />
           <Route path="/consultations/:id/tickets" exact={true} element={<PrivateRoute><VetConsultationTickets /></PrivateRoute>} />
