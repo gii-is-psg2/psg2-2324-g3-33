@@ -1,7 +1,7 @@
 import React from "react";
-import { BsDot, BsFillRocketTakeoffFill } from "react-icons/bs";
-import { FaCheck, FaPaperPlane, FaTimes } from "react-icons/fa";
-import { ImAirplane } from "react-icons/im";
+import { BsDot, BsCarFront, BsFillAirplaneEnginesFill } from "react-icons/bs";
+import { FaCheck, FaTimes } from "react-icons/fa";
+import { ImTruck } from "react-icons/im";
 import "../../static/css/pricing/pricingPage.css";
 
 export default function PlanList() {
@@ -13,10 +13,10 @@ export default function PlanList() {
         </div>
         <div className="section-pricing">
           <div className="pricing-container">
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background:  "#A52A2A" }}>
               <div className="title">
                 <div className="icon">
-                  <FaPaperPlane color="white" />
+                  <ImTruck color="white" />
                 </div>
                 <h2>BASIC</h2>
               </div>
@@ -50,10 +50,10 @@ export default function PlanList() {
               </div>
             </div>
             {/* END Col one */}
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background:  "#CD853F" }}>
               <div className="title">
                 <div className="icon">
-                  <ImAirplane color="white" />
+                  <BsCarFront color="white" />
                 </div>
                 <h2>GOLD</h2>
               </div>
@@ -89,10 +89,10 @@ export default function PlanList() {
               </div>
             </div>
             {/* END Col two */}
-            <div className="pricing-card text-center">
+            <div className="pricing-card text-center" style={{background:  "#8B4513" }}>
               <div className="title" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <div className="icon">
-                  <BsFillRocketTakeoffFill color="white" />
+                  <BsFillAirplaneEnginesFill color="white" />
                 </div>
                 <h2>PLATINUM</h2>
               </div>
