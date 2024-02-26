@@ -13,7 +13,8 @@ Durante el proceso de código, seguiremos el siguiente estándar decidido grupal
 
 La política de commits es la siguiente: 
 - Si el cambio de código es para añadir una nueva característica, al principio del commit se pondrá **feat**
-- Si es por arreglo, si pondrá **fix**
+- Si es por arreglo, se pondrá **fix**
+- Si es por adición de documentos, se pondrá **docs**
 
 Además, posteriormente se pondrá el mismo título que la rama (sin los "-" entre palabras), seguido del número de la issue a la que corresponde.
 
