@@ -14,6 +14,63 @@ Para llevar a cabo la tarea antes descrita, vamos a utilizar el framework de Spr
 - El 6 de febrero de 2024, los miembros del equipo de desarrollo empiezan a clonar el proyecto en sus máquinas locales.
 - El 7 de febrero de 2024, se crean las tarear que tiene que desarrollar el equipo de trabajo.
 
+## Objetivos y alcance de la CMDB
+La CMDB (Base de Datos de Gestión de Configuración) tiene como principal propósito centralizar y estructurar la información detallada sobre los elementos de configuración (CI) relevantes para nuestra organización. Dentro de sus objetivos se encuentran:
+-Mantener un registro actualizado de los recursos disponibles.
+-Mejorar la organización y supervisión de los recursos tecnológicos disponibles.
+-Proporcionar una visión clara de las relaciones y dependencias entre los diferentes elementos de configuración.
+El alcance de nuestra CMDB abarca todos los recursos que tienen impacto en el proyecto, como equipos informáticos, software instalado, dispositivos periféricos, servidores y otros elementos relevantes para nuestro entorno tecnológico.
+
+## Estructura de la CMDB
+La CMDB está estructurada de acuerdo con las siguientes categorías principales:
+Ordenadores o portátiles: Incluye todas las estaciones de trabajo y servidores presentes en el entorno de la organización.
+Software Instalado: Registra todos los programas y aplicaciones instalados en los ordenadores o portátiles y servidores.
+Periféricos: Contiene información sobre los dispositivos periféricos conectados a las computadoras, como impresoras, escáneres, etc.
+Servidores: Lista todos los servidores presentes en el entorno de la organización, junto con sus especificaciones y roles.
+
+## Plantilla de Informe de Elementos de Configuración (CI)
+A continuación, se presenta una plantilla para informar sobre los elementos de configuración agregados por cada miembro del grupo y sus relaciones:
+
+Miembro del Grupo: Alejandro Sevillano Barea
+
+Elementos de Configuración Agregados:
+Tipo de elemento: Portátil
+Nombre de elemento: Portátil(alesevbar)
+Marca y Modelo: Asus ROG
+Sistema Operativo: Windows 10
+
+Miembro del Grupo: Alberto Escobar Sánchez 
+
+Elementos de Configuración Agregados:
+Tipo de elemento: Portátil
+Nombre de elemento: Portátil(albescsan1)
+Marca y Modelo: HP
+Sistema Operativo: Windows 10
+
+Miembro del Grupo: Diego Manzanos Anento
+
+Elementos de Configuración Agregados:
+Tipo de elemento: Portátil
+Nombre de elemento: Portátil(diemanane)
+Marca y Modelo: Asus Zenbook
+Sistema Operativo: Windows 11
+
+Miembro del Grupo: Luis Giraldo Santiago 
+
+Elementos de Configuración Agregados:
+Tipo de elemento: Portátil
+Nombre de elemento: Portátil(luigirsan1)
+Marca y Modelo: Acer Aspire
+Sistema Operativo: Windows 11 Home
+
+Miembro del Grupo: Alejandro Vargas Muñiz
+
+Elementos de Configuración Agregados:
+Tipo de elemento: Portátil
+Nombre de elemento: Portátil(alevarmun1)
+Marca y Modelo: HP Laptop 15-bs0xx
+Sistema Operativo: Windows 10
+
 ### Fase 1: Primera semana de desarrollo
 Para la primera semana de desarrollo, la cual es desde el 6 de febreo hasta el 12 de febrero, se llevaron hasta la columna de done las siguentes tareas:
 
