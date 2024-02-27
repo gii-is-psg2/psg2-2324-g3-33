@@ -66,14 +66,18 @@ public class PetHotelRoomController {
     }
     @PutMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<PetHotelRoom> updatePetHotelRoom(@PathVariable("id") int id,@RequestBody @Valid PetHotelRoom petHotelRoom){
+    public ResponseEntity<PetHotelRoom> updatePetHotelRoom(@PathVariable("id") int id,@RequestBody @Valid String jsoString) throws JsonMappingException, JsonProcessingException{
         PetHotelRoom updatedRoom=petHotelRoomService.getPetHotelRoomById(id);
         if(updatedRoom==null)return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
-        updatedRoom.setName(petHotelRoom.getName());
-        updatedRoom.setAllowedType(petHotelRoom.getAllowedType());
-        updatedRoom.setClinic(petHotelRoom.getClinic());
-        updatedRoom.setSquareMetters(petHotelRoom.getSquareMetters());
-        updatedRoom.setPetOwner(petHotelRoom.getPetOwner());
+        System.out.println(jsoString);
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(jsoString);
+        updatedRoom.setName(jsonNode.get("name").asText());
+        PetType type=petService.findPetTypeByName(jsonNode.get("petType").asText());
+        updatedRoom.setAllowedType(type);
+        Clinic clinic=clinicService.findClinicByName(jsonNode.get("clinic").asText());
+        updatedRoom.setClinic(clinic);
+        updatedRoom.setSquareMetters(jsonNode.get("squareMetters").asInt());
         petHotelRoomService.save(updatedRoom);
         return new ResponseEntity<>(updatedRoom,HttpStatus.OK);
     }
@@ -90,11 +94,6 @@ public class PetHotelRoomController {
         Clinic clinic=clinicService.findClinicByName(jsonNode.get("clinic").asText());
         newRoom.setClinic(clinic);
         newRoom.setSquareMetters(jsonNode.get("squareMetters").asInt());
-        String ownerUserName=jsonNode.get("occupiedBy").asText();
-        if(!ownerUserName.isEmpty()){
-            Owner owner=ownerService.findOwnerByUsername(ownerUserName);
-            newRoom.setPetOwner(owner);
-        }
         petHotelRoomService.save(newRoom);
         return new ResponseEntity<>(newRoom,HttpStatus.OK);
     }

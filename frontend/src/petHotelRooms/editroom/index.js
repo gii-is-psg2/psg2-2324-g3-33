@@ -8,6 +8,7 @@ import { petHotelRoomEdit } from "./form/petHotelRoomForm";
 import FormGenerator from "../../components/formGenerator/formGenerator";
 import { useState, useEffect, useRef } from "react";
 import {useNavigate} from "react-router-dom";
+import { formValidators } from "../../validators/formValidators";
 
 const user = tokenService.getUser();
 const jwt = tokenService.getLocalAccessToken();
@@ -19,19 +20,31 @@ export default function EditPetHotelRoom() {
   const emptyItem = {
     id: "",
     name: "",
-    address: "",
-    telephone: "",
-    plan: null,
+    clinic: "",
+    squareMetters: "",
   };
   const [message, setMessage] = useState(null);
   const [visible, setVisible] = useState(false);
   const [petHotelRoom, setPetHotelRoom] = useFetchState(
     emptyItem,
-    `/api/v1/clinics/${id}`,
+    `/api/v1/pethotelrooms/${id}`,
     jwt,
     setMessage,
     setVisible,
     id
+  );
+  const [clinics, setClinics] = useFetchState(
+    [{
+      id: "",
+      name: "",
+      address: "",
+      telephone: "",
+      plan: null,
+    }],
+    `/api/v1/clinics/user/${user.id}`,
+    jwt,
+    setMessage,
+    setVisible
   );
   const [dataLoaded, setDataLoaded] = useState(false);
 
@@ -67,7 +80,7 @@ export default function EditPetHotelRoom() {
         body: JSON.stringify(values),
       })
       .then((res) => {
-        if (res.status === 201) {
+        if (res.status === 200) {
           navigator("/pethotelrooms");
         }
       })
@@ -91,7 +104,6 @@ export default function EditPetHotelRoom() {
   }, [petHotelRoom]);
 
   const modal = getErrorModal(setVisible, visible, message);
-
   return (
     <div className="auth-page-container">
       {<h2>{id !== "new" ? "Edit PetHotelRoom" : "Add PetHotelRoom"}</h2>}
@@ -99,8 +111,26 @@ export default function EditPetHotelRoom() {
       <div className="auth-form-container">
         {dataLoaded ? (
           <FormGenerator
-            ref={petHotelRoomEdit}
-            inputs={petHotelRoomEdit}
+            ref={editPetHotelRoomFormRef}
+            inputs={[
+              ...petHotelRoomEdit,
+              {
+                tag: 'Clinic',
+                name: 'clinic',
+                type: 'select',
+                values: ['None', ...clinics.map(clinic => clinic.name)],
+                defaultValue: '',
+                isRequired: true,
+                validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
+              },{
+                tag: "SquareMetters",
+                name: "squareMetters",
+                type: "text",
+                defaultValue: "",
+                isRequired: true,
+                validators: [formValidators.notEmptyValidator],
+            },
+            ]}
             onSubmit={handleSubmit}
             buttonText="Edit"
             buttonClassName="auth-button"
@@ -108,7 +138,25 @@ export default function EditPetHotelRoom() {
         ) : (
           <FormGenerator
           ref={editPetHotelRoomFormRef}
-          inputs={petHotelRoomEdit}
+          inputs={[
+            ...petHotelRoomEdit,
+            {
+              tag: 'Clinic',
+              name: 'clinic',
+              type: 'select',
+              values: ['None', ...clinics.map(clinic => clinic.name)],
+              defaultValue: '',
+              isRequired: true,
+              validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
+            },{
+              tag: "SquareMetters",
+              name: "squareMetters",
+              type: "text",
+              defaultValue: "",
+              isRequired: true,
+              validators: [formValidators.notEmptyValidator],
+          },
+          ]}
           onSubmit={handleSubmit}
           buttonText={id !== "new" ? "Edit" : "Add"}
           buttonClassName="auth-button"

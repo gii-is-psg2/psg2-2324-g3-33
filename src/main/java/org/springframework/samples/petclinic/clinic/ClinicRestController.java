@@ -1,6 +1,8 @@
 package org.springframework.samples.petclinic.clinic;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.samples.petclinic.auth.payload.response.MessageRespon
 import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
 import org.springframework.samples.petclinic.clinicowner.ClinicOwnerService;
 import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.user.User;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.samples.petclinic.util.RestPreconditions;
 import org.springframework.samples.petclinic.vet.Vet;
@@ -96,5 +99,11 @@ public class ClinicRestController {
 		RestPreconditions.checkNotNull(clinicService.findClinicById(clinicId), "Clinic", "ID", clinicId);
 		clinicService.delete(clinicId);
 		return new ResponseEntity<>(new MessageResponse("Clinic deleted!"), HttpStatus.OK);
+	}
+	@GetMapping(value ="user/{userId}")
+	public ResponseEntity<List<Clinic>> findClinicsByUserId(@PathVariable("userId") int userId) {
+		ClinicOwner clinicOwner=clinicOwnerService.findByUserId(userId);
+		if(clinicOwner==null)return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>(new ArrayList<>(clinicOwner.getClinics()), HttpStatus.OK);
 	}
 }

@@ -112,4 +112,4 @@ INSERT INTO consultation_tickets(id,description,creation_date, user_id, consulta
 INSERT INTO consultation_tickets(id,description,creation_date, user_id, consultation_id) VALUES (7, 'My lovebird doesn''t sing as my neighbour''s one.', '2023-02-24 12:30', 5, 4);
 INSERT INTO consultation_tickets(id,description,creation_date, user_id, consultation_id) VALUES (8, 'Lovebirds do not sing.', '2023-02-24 18:30', 16, 4);
 
-INSERT INTO pet_hotel_room(id,name,allowed_type_id,associated_clinic,square_metters,pet_owner_id) VALUES(1,'PetHotelRoomAlberto',2,1,50,null);
+INSERT INTO pet_hotel_room(id,name,allowed_type_id,associated_clinic,square_metters) VALUES(1,'PetHotelRoomAlberto',2,1,50);

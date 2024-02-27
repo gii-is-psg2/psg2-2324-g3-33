@@ -31,8 +31,6 @@ export default function PetHotelRoomList() {
             <td className="text-center">{room.allowedType.name}</td>
             <td className="text-center">{room.clinic.name}</td>
             <td className="text-center">{room.squareMetters}</td>
-            {room.petOwner==null&&<td className="text-center">AnyOne</td>}
-            {room.petOwner!=null&&<td className="text-center">{room.petOwner.firstName} {room.petOwner.lastName}</td>}
             <td className="text-center">
               <ButtonGroup>
                 <Button
@@ -100,7 +98,6 @@ export default function PetHotelRoomList() {
                 <th width="15%" className="text-center">PetType</th>
                 <th width="15%" className="text-center">Clinic</th>
                 <th width="15%" className="text-center">SquareMetters</th>
-                <th width="15%" className="text-center">Occupied By</th>
                 <th width="30%" className="text-center">Actions</th>
               </tr>
             </thead>

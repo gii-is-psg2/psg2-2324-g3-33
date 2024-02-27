@@ -7,7 +7,6 @@ import org.springframework.samples.petclinic.owner.Owner;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +26,4 @@ public class PetHotelRoom extends NamedEntity{
 
     @NotNull
     private int squareMetters;
-
-    @OneToOne
-    private Owner petOwner;
 }

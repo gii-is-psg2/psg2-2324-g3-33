@@ -1,5 +1,4 @@
 import { formValidators } from "../../../validators/formValidators";
-
 export const petHotelRoomEdit = [
     {
         tag: "Name",
@@ -17,29 +16,5 @@ export const petHotelRoomEdit = [
         defaultValue: "None",
         isRequired: true,
         validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
-    },
-    {
-        tag: "Clinic",
-        name: "clinic",
-        type: "text",
-        defaultValue: "",
-        isRequired: true,
-        validators: [formValidators.notEmptyValidator],
-    },
-    {
-        tag: "SquareMetters",
-        name: "squareMetters",
-        type: "text",
-        defaultValue: "",
-        isRequired: true,
-        validators: [formValidators.notEmptyValidator],
-    },
-    {
-        tag: "Occupied By",
-        name: "occupiedBy",
-        type: "text",
-        defaultValue: "",
-        isRequired: false,
-        validators: []
     },
 ];
