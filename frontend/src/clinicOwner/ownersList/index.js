@@ -48,12 +48,12 @@ export default function OwnerListClinicOwner(){
           <Table aria-label="owners" className="mt-4">
             <thead>
               <tr>
-                <th width="15%">Name</th>
-                <th width="20%">Address</th>
-                <th width="15%">City</th>
-                <th width="15%">Telephone</th>
-                <th width="15%">User</th>
-                <th width="20%">Clinic</th>
+                <th width="15%" style={{ backgroundColor: "#f5deb3" }}>Name</th>
+                <th width="20%" style={{ backgroundColor: "#f5deb3" }}>Address</th>
+                <th width="15%" style={{ backgroundColor: "#f5deb3" }}>City</th>
+                <th width="15%" style={{ backgroundColor: "#f5deb3" }}>Telephone</th>
+                <th width="15%" style={{ backgroundColor: "#f5deb3" }}>User</th>
+                <th width="20%" style={{ backgroundColor: "#f5deb3" }}>Clinic</th>
               </tr>
             </thead>
             <tbody>{ownerList}</tbody>

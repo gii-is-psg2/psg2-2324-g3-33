@@ -96,14 +96,14 @@ export default function ConsultationListClinicOwner() {
                 <Table aria-label='consultations' className="mt-4">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Status</th>
-                            <th>Owner</th>
-                            <th>Pet</th>
-                            <th>Clinic</th>
-                            <th>Sent To</th>
-                            <th>Creation Date</th>
-                            <th>Actions</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Title</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Status</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Owner</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Pet</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Clinic</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Sent To</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Creation Date</th>
+                            <th style={{ backgroundColor: "#f5deb3" }}>Actions</th>
                         </tr>
                     </thead>
                     <tbody>{consultationList}</tbody>
