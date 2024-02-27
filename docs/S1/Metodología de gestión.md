@@ -6,8 +6,21 @@ En este informe, se describe la metodología de gestión de configuración segui
 
 ## 2. Estándares de codigo
 
-Durante el proceso de código, seguiremos el siguiente estándar decidido grupalmente en clase.
-- **Código imprescindible**: Se añadirá el código imprescindible para el progreso de la issue. No se añadirá nada que no corresponda con lo descrito dentro de los elementos del product backlog.
+Oracle ha establecido una serie de estándares de código y convenciones de estilo para Java, conocidos como "Java Code Conventions". Estos estándares están diseñados para promover la legibilidad y consistencia en el código Java. Hemos decidido seguir estos estándares. Algunos de los principales puntos incluidos en estas convenciones son:
+
+- **Nombres de variables, métodos y clases**: Utilizar nombres significativos y descriptivos para variables, métodos y clases. Los nombres de variables y metodos deben comenzar con letra minúscula, mientras que los nombres de clases y tipos deben comenzar con mayúscula.
+
+- **Formato del código**: Utilizar sangrías consistentes (generalmente de 4 espacios), y colocar llaves en la misma línea que la declaración (excepto para las declaraciones de control de flujo). Además, se recomienda utilizar un máximo de 80 caracteres por línea.
+
+- **Comentarios**: Incluir comentarios significativos para explicar el propósito del código, especialmente en áreas complejas o difíciles de entender.
+ 
+- **Convenciones de código**: Utilizar convenciones establecidas para el estilo de código, como el uso de constantes en mayúsculas, el uso de paréntesis alrededor de las expresiones en las declaraciones de control de flujo, etc.
+
+- **Declaraciones de importación**: Evitar el uso de importaciones de comodines (wildcards) y en su lugar importar clases específicas.
+
+- **Convenciones de nombres de paquetes**: Utilizar nombres de paquetes en minúsculas y seguir una convención de nomenclatura de paquetes jerárquica inversa, similar al nombre de dominio invertido.
+
+- **Convenciones de comentarios**: Utilizar comentarios JavaDoc para documentar clases, métodos y variables públicas.
 
 ## 3. Política de Commits
 
@@ -26,13 +39,20 @@ Siguiendo esta política, un ejemplo para un cambio de código de la issue 14 qu
 
 Se va a seguir la siguiente estrategia:
 
-El proyecto tendrá un único repositorio compartido, el cual se dividirá en varias ramas. Cada issue supondrá la creación de una rama y la estrategia de estas se explica en el siguiente punto.
+El proyecto tendrá un único repositorio remoto compartido, el cual se dividirá en varias ramas. Estas son: rama main, rama develop, rama release, rama hotfix.
+
+La rama main es la rama principal del proyecto, donde se subirán todos los cambios después de realizar cada release.
+
+La rama develop es la rama a la que se irán subiendo y mergeando las pull requests durante los sprints.
+
+La rama release será la rama donde se realizará el despliegue y por tanto la rama que contendrá al final de cada sprint todos los cambios realizados durante este.
+
+La rama hotfix será la rama donde se subirán los cambios rápidos que se realicen tras haber encontrado errores posteriores al release.
 
 ## 5. Estrategia de ramas (Git Flow)
 
 Seguiremos una estrategia de ramas basada en Git Flow. El proyecto tendrá tres tipos de ramas: en las que se añadan cambios (feature), en la que se prepare el release (release), y en la que se corrijan bugs (fix). Como la mayoría de ramas serán del tipo *feature*, hemos optado por omitir el nombre de esta al principio de la rama, mientras que cuando sea de tipo *release* o *fix* se indicará al principio de esta.
 
-Para dar por terminada una rama o issue, haremos el peer review. Esto significa que, cuando la persona asignada avise de que sus cambios han sido subidos, otros dos integrantes del grupo deberán revisarla y poner un comentario en la misma issue dando su opinión. Si ambas opiniones son favorables, se dará por terminada la issue.
 
 ### 5.1. Desarrollo de Ramas feature
 
@@ -49,7 +69,7 @@ Para la corrección de bugs, se añadirá al comienzo la palabra *fix*, quedando
 
 ## 6. Políticas de Versiones
 
-La política de versiones adoptada está basada en versión por sprint. Siendo la version 1.0 la correspondiente al Sprint 1, la 2.0 para el sprint 2 y así sucesivamente.
+La política de versiones adoptada está basada en el Semantic Versioning. Esta cuenta con tres numeros separados por puntos de la forma: X.Y.Z. Donde la X significa el número del Sprint en el que se ha realizado la versión, la Y siginifica las versiones menores, que tienen cambios durante el proceso, y la Z que especifica los patches o cambios menores dentro de cada version menor especificada en Y.
 
 ## 7. Definición de "Done"
 
@@ -57,9 +77,13 @@ En nuestro grupo, la definición de "Done" viene dada de la siguiente forma:
 
 Se pasará al tablero *DONE* una issue si, ha sido subida a la rama a la que estaba asignada, ha pasado por el peer review favorablemente y se ha mergeado con la rama main. En caso de que una de las tres no se haya hecho, no se podrá dar por "Done" una issue.
 
+Para pasar por el peer review, la pull request deberá tener al menos un comentario que la acepte.
+
 ## 8. Gestión de Documentos en el Repositorio
 
 Todos y cada uno de los documentos del repositorio se subirán a una carpeta *docs* situada en la raíz del proyecto. Dentro de esta carpeta, tendremos subcarpetas para diferenciar los sprints.
 
-Además, haremos un informe de reunión tanto por reunión "extracurricular", como para las stand-up. Los nombres de estas reuniones, vendrán dados por: tipo-reunión-fecha. Siendo por ejemplo una reunión de tipo stand-up del Martes 20 de febrero: stand-up-20/02 
+Los informes que se hagan, tendrán el nombre del propio informe como nombre del archivo.
+
+Además, haremos un informe de reunión tanto por reunión "extracurricular", como para las stand-up. Los nombres de estas reuniones, vendrán dados por: fecha-tipo-reunión. Siendo por ejemplo una reunión de tipo stand-up del Martes 20 de febrero: 20-02-2024-Daily-Stand-ups-Meeting.
 
