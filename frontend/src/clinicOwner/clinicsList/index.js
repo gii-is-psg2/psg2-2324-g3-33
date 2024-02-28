@@ -98,11 +98,11 @@ export default function ClinicsList() {
           <Table aria-label="clinics" className="mt-4">
             <thead>
               <tr>
-                <th width="15%" className="text-center">Name</th>
-                <th width="15%" className="text-center">Address</th>
-                <th width="15%" className="text-center">Telephone</th>
-                <th width="15%" className="text-center">Plan</th>
-                <th width="30%" className="text-center">Actions</th>
+                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Name</th>
+                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Address</th>
+                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Telephone</th>
+                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Plan</th>
+                <th width="30%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Actions</th>
               </tr>
             </thead>
             <tbody>{clinicsList}</tbody>

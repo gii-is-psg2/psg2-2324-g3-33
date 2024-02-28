@@ -1,7 +1,10 @@
 package org.springframework.samples.petclinic.consultation;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import jakarta.validation.Valid;
 
@@ -39,6 +42,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 public class ConsultationController {
 
 	private final ConsultationService consultationService;
+	private final TicketService ticketService;
 	private final UserService userService;
 	private static final String OWNER_AUTH = "OWNER";
 	private static final String VET_AUTH = "VET";
@@ -46,9 +50,10 @@ public class ConsultationController {
 	private static final String CLINIC_OWNER_AUTH = "CLINIC_OWNER";
 
 	@Autowired
-	public ConsultationController(ConsultationService consultationService, UserService userService) {
+	public ConsultationController(ConsultationService consultationService, UserService userService,TicketService ticketService) {
 		this.consultationService = consultationService;
 		this.userService = userService;
+		this.ticketService = ticketService;
 	}
 
 	@InitBinder("consultation")
@@ -62,13 +67,21 @@ public class ConsultationController {
 		User user = userService.findCurrentUser();
 
 		List<Consultation> res = null;
+		List<Ticket> tickets= ticketService.findAll();
 		if (user.hasAnyAuthority(ADMIN_AUTH).equals(true)) {
 			res = (List<Consultation>) consultationService.findAll();
 		} else if (user.hasAnyAuthority(CLINIC_OWNER_AUTH).equals(true) && userId != null) {
 			res = (List<Consultation>) consultationService.findAllByClinicOwnerUserId(userId);
+			//issue 19 consultations clinic owner
+			List<Consultation> consultationsWithTickets=new ArrayList<>(tickets.stream().map(t->t.getConsultation()).collect(Collectors.toSet()));
+			res=res.stream().filter(c->consultationsWithTickets.contains(c)).toList();
+
 		} else if (user.hasAnyAuthority(VET_AUTH).equals(true) && userId != null) {
 			Vet vet = userService.findVetByUser(userId);
 			res = consultationService.findAllByClinicId(vet.getClinic().getId());
+			//issue 19 consultations vet
+			List<Consultation> consultationsWithTickets=new ArrayList<>(tickets.stream().map(t->t.getConsultation()).collect(Collectors.toSet()));
+			res=res.stream().filter(c->!consultationsWithTickets.contains(c)).toList();
 		} else {
 			if (userId == null) {
 				Owner owner = userService.findOwnerByUser(user.getId());
