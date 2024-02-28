@@ -13,7 +13,7 @@
 
 ## Contenido
 
-1. **Bienvenida y Objetivos**
+1. **Objetivo**
    - El objetivo de esta Sprint Review es mostrar el estado del proyecto para su revisión y así obtener los aspectos a mejorar de cara a la entrega final de este Sprint.
 
 2. **Revisión de los Objetivos de la Sprint**
