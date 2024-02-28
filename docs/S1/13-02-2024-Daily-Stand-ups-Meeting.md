@@ -26,16 +26,19 @@ Reunión sobre lo que hemos hecho, lo que vamos hacer y las dificultades encotra
    - Se ha cambiado el color a los botones de la página MyPets
    
 2. Trabajo por realizar
-   - Cambio de iconos en la página de Plans
+   - Cambio de iconos en /plans
    - Creación del informe de la historia del proyecto
-   - Creación del informe de la metodología
-   - Creación de un acta de reuniones
-   - Adición de una nueva sección en el informe técnico
-   - Adición de una nueva funcionalidad para los Clinic Owners
-   - Cambiar el comportamiento de la página de Consultations
+   - Nueva funcionalidad para los Clinics Owners
    - Cambiar el color de fondo de todas las cabeceras de las tablas
    - Preparación de la primera versión
-   - Revisión del cambio de color en los gradientes de la página Plans
+   - Cambiar el comportamiento de la página de Consultations
+   - Informe de la metodología
+   - Crear informe de la historia del proyecto
+   - Daily Stand-ups Meeting 20/02/2024
+   - Nueva sección en el informe técnico
+   - Planificación
+   - Retrospectiva
+   - Review
    
 3. Dificultades encontradas en le desarrollo
    - Ningún miembro del equípo ha reportado alguna incidencia sobre los cambios que sean realizado, 
@@ -45,15 +48,19 @@ Reunión sobre lo que hemos hecho, lo que vamos hacer y las dificultades encotra
 - Para la siguente semana, cada miembro deberia hacer una tarea de las que se le han asignado y llevarla hasta la columna done.
 
 ## Tareas Pendientes
-- Issue #3
-- Issue #12
-- Issue #13
-- Issue #15
-- Issue #17
-- Issue #18
-- Issue #19
-- Issue #20
-- Issue #21
+- Issue #3, Cambio de iconos en /plans
+- Issue #12, Creación del informe de la historia del proyecto
+- Issue #13, Nueva funcionalidad para los Clinics Owners
+- Issue #17, Cambiar el color de fondo de todas las cabeceras de las tablas
+- Issue #18, Preparación de la primera versión
+- Issue #19, Cambiar el comportamiento de la página de Consultations
+- Issue #30, Informe de la metodología
+- Issue #32, Crear informe de la historia del proyecto
+- Issue #33, Daily Stand-ups Meeting 20/02/2024
+- Issue #34, Nueva sección en el informe técnico
+- Issue #35, Planificación
+- Issue #36, Retrospectiva
+- Issue #37, Review
 
 ## Notas Adicionales
 Intencionalmente en blanco.
