@@ -29,7 +29,7 @@
 | 2  | Crear informe de la historia del proyecto        | 2           | Luis Giraldo Santiago    |
 | 3  | Informe de la metodología        | 2           | Diego Manzanos Anento    |
 | 4  | Cambios o adiciones al proyecto        |        12    | Alberto Escobar Sánchez, Alejandro Sevillano Barea, Diego Manzanos Anento    |
-| 5  | Lanzamiento del proyecto       | 3           |     |
+| 5  | Lanzamiento del proyecto       | 3           |  Diego Manzanos Anento   |
 | 6  | Nueva sección en el informe técnico        | 2           | Alejandro Sevillano Barea    |
 | 7  | Todos los informes sobre actas de reuniones        |  5          |  Alejandro Vargas Muñiz, Luis Giraldo Santiago   |
 | 8  | Informe de la metodología        | 2           | Diego Manzanos Anento    |
@@ -54,7 +54,7 @@
 | 14  | Cambiar el color de fondo de todas las cabeceras de las tablas  | Alejandro Sevillano Barea    |
 | 15  | Nueva funcionalidad para los Clinic Owners  | Alberto Escobar Sánchez    |
 | 16  | Cambiar el color de los gradientes  | Diego Manzanos Anento    |
-| 17  | Lanzamiento del proyecto  |     |
+| 17  | Lanzamiento del proyecto  | Diego Manzanos Anento    |
 | 18  | Nueva sección en el informe técnico  | Alejandro Sevillano Barea    |
 | 19  | Informe de la metodología  | Diego Manzanos Anento    |
 | 20  | Daily Stand-ups Meeting 13/02  | Luis Giraldo Santiago    |

@@ -1,21 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, ButtonGroup, Table } from "reactstrap";
-import tokenService from "../../services/token.service";
-import useFetchState from "../../util/useFetchState";
-import getErrorModal from "../../util/getErrorModal";
-import "../../static/css/admin/adminPage.css";
+import tokenService from "../services/token.service";
+import useFetchState from "../util/useFetchState";
+import getErrorModal from "../util/getErrorModal";
 import { useNavigate } from "react-router-dom";
 
 const user = tokenService.getUser();
 const jwt = tokenService.getLocalAccessToken();
 
-export default function ClinicsList() {
+export default function PetHotelRoomList() {
   const [message, setMessage] = useState(null);
   const [visible, setVisible] = useState(false);
-  const [clinics, setClinics] = useFetchState(
+  const [petHotelRooms, setPetHotelRooms] = useFetchState(
     [],
-    `/api/v1/clinics?userId=${user.id}`,
+    `/api/v1/pethotelrooms/clinicowner/${user.id}`,
     jwt,
     setMessage,
     setVisible
@@ -24,35 +23,35 @@ export default function ClinicsList() {
 
   const navigator = useNavigate();
 
-  const clinicsList =
-    clinics.map((clinic) => {
+  const petHotelRoomList =
+  petHotelRooms.map((room) => {
         return (
-          <tr key={clinic.id}>
-            <td className="text-center">{clinic.name}</td>
-            <td className="text-center">{clinic.address}</td>
-            <td className="text-center">{clinic.telephone}</td>
-            <td className="text-center">{clinic.plan}</td>
+          <tr key={room.id}>
+            <td className="text-center">{room.name}</td>
+            <td className="text-center">{room.allowedType.name}</td>
+            <td className="text-center">{room.clinic.name}</td>
+            <td className="text-center">{room.squareMetters}</td>
             <td className="text-center">
               <ButtonGroup>
                 <Button
                   size="sm"
                   color="primary"
-                  aria-label={"edit-" + clinic.name}
+                  aria-label={"edit-" + room.name}
                   tag={Link}
-                  to={"/clinics/" + clinic.id}
+                  to={"/pethotelrooms/" + room.id}
                 >
                   Edit
                 </Button>
                 <Button
                   size="sm"
                   color="danger"
-                  aria-label={"delete-" + clinic.name}
+                  aria-label={"delete-" + room.name}
                   onClick={() => {
                     let confirmMessage = window.confirm("Are you sure you want to delete it?");
 
                     if(!confirmMessage) return;
 
-                    fetch(`/api/v1/clinics/${clinic.id}`, {
+                    fetch(`/api/v1/pethotelrooms/${room.id}`, {
                       method: "DELETE",
                       headers: {
                         "Content-Type": "application/json",
@@ -61,7 +60,7 @@ export default function ClinicsList() {
                     })
                       .then((res) => {
                         if (res.status === 200) {
-                          setMessage("Clinic deleted successfully");
+                          setMessage("PetHotelRoom deleted successfully");
                           setVisible(true);
                           navigator(0);
                         }
@@ -79,33 +78,30 @@ export default function ClinicsList() {
           </tr>
         );
       });
-
-      
   const modal = getErrorModal(setVisible, visible, message);
-
   return (
     <div>
       <div className="admin-page-container">
-        <h1 className="text-center">My Clinics</h1>
+        <h1 className="text-center">My PetHotelRooms</h1>
         {alerts.map((a) => a.alert)}
         {modal}
         <div className="float-right">
-          <Button color="success" tag={Link} to="/clinics/new">
-            Add clinic
+          <Button color="success" tag={Link} to="/pethotelrooms/new">
+            Add PetHotelRoom
           </Button>
         </div>
         <div>
-          <Table aria-label="clinics" className="mt-4">
+          <Table aria-label="pethotelrooms" className="mt-4">
             <thead>
               <tr>
-                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Name</th>
-                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Address</th>
-                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Telephone</th>
-                <th width="15%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Plan</th>
-                <th width="30%" className="text-center" style={{ backgroundColor: "#f5deb3" }}>Actions</th>
+                <th width="15%" className="text-center">Name</th>
+                <th width="15%" className="text-center">PetType</th>
+                <th width="15%" className="text-center">Clinic</th>
+                <th width="15%" className="text-center">SquareMetters</th>
+                <th width="30%" className="text-center">Actions</th>
               </tr>
             </thead>
-            <tbody>{clinicsList}</tbody>
+            <tbody>{petHotelRoomList}</tbody>
           </Table>
         </div>
       </div>
