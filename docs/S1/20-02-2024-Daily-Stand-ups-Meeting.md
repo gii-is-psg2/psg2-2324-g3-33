@@ -26,16 +26,20 @@ Reunión sobre lo que hemos hecho, lo que vamos hacer y las dificultades encotra
    - Se ha cambiado el color a los botones de la página MyPets
    - Cambio de iconos en la página de Plans
    - Revisión del cambio de color en los gradientes de la página Plans
+   - Daily Stand-ups Meeting 13/02
    
 2. Trabajo por realizar
    - Creación del informe de la historia del proyecto
-   - Creación del informe de la metodología
-   - Creación de un acta de reuniones
-   - Adición de una nueva sección en el informe técnico
-   - Adición de una nueva funcionalidad para los Clinic Owners
-   - Cambiar el comportamiento de la página de Consultations
+   - Nueva funcionalidad para los Clinics Owners
    - Cambiar el color de fondo de todas las cabeceras de las tablas
    - Preparación de la primera versión
+   - Cambiar el comportamiento de la página de Consultations
+   - Informe de la metodología
+   - Crear informe de la historia del proyecto
+   - Nueva sección en el informe técnico
+   - Planificación
+   - Retrospectiva
+   - Review
    
 3. Dificultades encontradas en le desarrollo
    - Ningún miembro del equípo ha reportado alguna incidencia sobre los cambios que sean realizado.
@@ -44,14 +48,17 @@ Reunión sobre lo que hemos hecho, lo que vamos hacer y las dificultades encotra
 - Para la siguente semana, se deben llevar todas las issues hasta la columna done, para ello debemos seguir la definición de hecho.
 
 ## Tareas Pendientes
-- Issue #12
-- Issue #13
-- Issue #15
-- Issue #17
-- Issue #18
-- Issue #19
-- Issue #20
-- Issue #21
+- Issue #12, Creación del informe de la historia del proyecto
+- Issue #13, Nueva funcionalidad para los Clinics Owners
+- Issue #17, Cambiar el color de fondo de todas las cabeceras de las tablas
+- Issue #18, Preparación de la primera versión
+- Issue #19, Cambiar el comportamiento de la página de Consultations
+- Issue #30, Informe de la metodología
+- Issue #32, Crear informe de la historia del proyecto
+- Issue #34, Nueva sección en el informe técnico
+- Issue #35, Planificación
+- Issue #36, Retrospectiva
+- Issue #37, Review
 
 ## Notas Adicionales
 Intencionalmente en blanco.
