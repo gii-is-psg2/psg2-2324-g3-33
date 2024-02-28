@@ -64,7 +64,13 @@ public class OwnerService {
 	public Optional<Owner> optFindOwnerByUser(int userId) throws DataAccessException {
 		return this.ownerRepository.findByUser(userId);
 	}
-
+	@Transactional(readOnly = true)
+	public Owner findOwnerByUsername(String username) throws DataAccessException {
+		List<Owner>owners=(List<Owner>) ownerRepository.findAll();
+		Optional<Owner> owner=owners.stream().filter(o->o.getUser().getUsername().equalsIgnoreCase(username)).findFirst();
+		if(!owner.isPresent())return null;
+		return owner.get();
+	}
 	@Transactional
 	public Owner saveOwner(Owner owner) throws DataAccessException {
 		ownerRepository.save(owner);

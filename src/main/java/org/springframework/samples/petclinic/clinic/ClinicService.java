@@ -76,4 +76,11 @@ public class ClinicService {
 	public void delete(int clinicId) throws DataAccessException {
 		clinicRepository.deleteById(clinicId);
 	}
+	@Transactional(readOnly = true)
+	public Clinic findClinicByName(String name) throws DataAccessException {
+		List<Clinic> clinics= (List<Clinic>) clinicRepository.findAll();
+		Optional<Clinic> clinic=clinics.stream().filter(c->c.getName().equalsIgnoreCase(name)).findFirst();
+		if(!clinic.isPresent())return null;
+		return clinic.get();
+	}
 }
