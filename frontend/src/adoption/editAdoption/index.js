@@ -7,7 +7,6 @@ import useFetchState from "../../util/useFetchState";
 import { adoptionEditFormInput } from "./form/adoptionEditFormInput";
 import FormGenerator from "../../components/formGenerator/formGenerator";
 import { useState, useEffect, useRef } from "react";
-import {useNavigate} from "react-router-dom";
 import { formValidators } from "../../validators/formValidators";
 
 const user = tokenService.getUser();
@@ -105,7 +104,7 @@ export default function AdoptionEdit(){
   const modal = getErrorModal(setVisible, visible, message);
   return (
     <div className="auth-page-container">
-      {<h2>{id !== "new" ? "Edit PetHotelRoom" : "Add PetHotelRoom"}</h2>}
+      {<h2>{id !== "new" ? "Edit Adoptions" : "Add Adoptions"}</h2>}
       {modal}
       <div className="auth-form-container">
         {dataLoaded && (
