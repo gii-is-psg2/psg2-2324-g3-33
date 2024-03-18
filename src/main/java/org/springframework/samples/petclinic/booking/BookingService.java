@@ -1,5 +1,7 @@
 package org.springframework.samples.petclinic.booking;
 
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -29,6 +31,16 @@ public class BookingService {
 
     @Transactional
 	public Booking saveBooking(Booking booking) throws DataAccessException {
+		
+		// Restricciones para validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
+		Iterable<Booking> currentBookings = bookingRepository.findAll();
+		for (Booking currentBooking : currentBookings) {
+			if (currentBooking.getPet().equals(booking.getPet()) ||
+				currentBooking.getRoom().equals(booking.getRoom())) {
+				throw new IllegalArgumentException("Ya hay una reserva para la misma mascota o la misma habitación.");
+			}
+		}
+
 		bookingRepository.save(booking);
 		return booking;
 	}
