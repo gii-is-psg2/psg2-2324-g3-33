@@ -2,7 +2,6 @@ package org.springframework.samples.petclinic.booking;
 
 import java.util.Date;
 
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -31,11 +30,11 @@ import lombok.Setter;
 public class Booking extends BaseEntity {
 
     @NotNull
-    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date startDate;
 
     @NotNull
-    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date finishDate;
 
     @Valid

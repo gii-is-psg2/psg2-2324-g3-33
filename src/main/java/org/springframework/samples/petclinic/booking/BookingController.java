@@ -76,21 +76,6 @@ public class BookingController {
 		return new ResponseEntity<>(savedBooking, HttpStatus.CREATED);
 	}
 
-	// @PostMapping
-    // @ResponseStatus(HttpStatus.OK)
-    // public ResponseEntity<Booking> createBooking(@RequestBody @Valid String jsoString) throws JsonMappingException, JsonProcessingException{
-    //     Booking newBooking=new Booking();
-    //     ObjectMapper objectMapper = new ObjectMapper();
-    //     JsonNode jsonNode = objectMapper.readTree(jsoString);
-    //     PetType type=petService.findPetTypeByName(jsonNode.get("petType").asText());
-    //     newRoom.setAllowedType(type);
-    //     PetHotelRoom room=petHotelRoomService.findClinicByName(jsonNode.get("clinic").asText());
-    //     newRoom.setClinic(clinic);
-    //     newRoom.setSquareMetters(jsonNode.get("squareMetters").asInt());
-    //     petHotelRoomService.save(newRoom);
-    //     return new ResponseEntity<>(newRoom,HttpStatus.OK);
-    // }
-
     @PutMapping(value = "{bookingId}")
 	@ResponseStatus(HttpStatus.OK)
 	public ResponseEntity<Booking> update(@PathVariable("bookingId") int bookingId, @RequestBody @Valid Booking booking) {
