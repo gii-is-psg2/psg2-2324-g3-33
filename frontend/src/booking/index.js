@@ -23,7 +23,7 @@ export default function BookingList (){
               <td className="text-center">{booking.startDate}</td>
               <td className="text-center">{booking.finishDate}</td>
               <td className="text-center">{booking.pet.name}</td>
-              <td className="text-center">{booking.pet.owner.name}</td>
+              <td className="text-center">{booking.owner.firstName}</td>
               <td className="text-center">{booking.room.name}</td>
               <td className="text-center">
               </td>

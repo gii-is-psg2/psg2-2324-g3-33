@@ -6,6 +6,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
+import org.springframework.samples.petclinic.pet.PetHotelRoom;
+import org.springframework.samples.petclinic.pet.PetHotelRoomRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,9 +16,12 @@ public class BookingService {
 
     private BookingRepository bookingRepository;
 
+	private PetHotelRoomRepository petHotelRoomRepository;
+
     @Autowired
-    public BookingService(BookingRepository bookingRepository){
+    public BookingService(BookingRepository bookingRepository, PetHotelRoomRepository petHotelRoomRepository){
         this.bookingRepository = bookingRepository;
+		this.petHotelRoomRepository = petHotelRoomRepository;
     }
 
     @Transactional(readOnly = true)
@@ -32,14 +37,20 @@ public class BookingService {
     @Transactional
 	public Booking saveBooking(Booking booking) throws DataAccessException {
 		
-		// Restricciones para validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
 		Iterable<Booking> currentBookings = bookingRepository.findAll();
 		for (Booking currentBooking : currentBookings) {
-			if (currentBooking.getPet().equals(booking.getPet()) ||
-				currentBooking.getRoom().equals(booking.getRoom())) {
-				throw new IllegalArgumentException("Ya hay una reserva para la misma mascota o la misma habitación.");
+			if(currentBooking.getOwner().getId().equals(booking.getOwner().getId())){
+				if (currentBooking.getStartDate().before(booking.getStartDate()) &&
+				currentBooking.getFinishDate().after(booking.getStartDate())
+				&& (currentBooking.getPet().getId().equals(booking.getPet().getId()) ||
+				currentBooking.getRoom().getId().equals(booking.getRoom().getId()))
+				) {
+					throw new IllegalArgumentException("Ya hay una reserva para la misma mascota o la misma habitación.");
+				}
 			}
+
 		}
+		
 
 		bookingRepository.save(booking);
 		return booking;
@@ -57,5 +68,5 @@ public class BookingService {
 		Booking toDelete = findBookingById(id);
 		bookingRepository.delete(toDelete);
 	}
-    
+
 }

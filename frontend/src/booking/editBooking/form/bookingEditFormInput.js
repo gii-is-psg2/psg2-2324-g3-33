@@ -4,7 +4,7 @@ export const bookingEditFormInput = [
   {
     tag: "StartDate",
     name: "startDate",
-    type: "date",
+    type: "datetime-local",
     defaultValue: "",
     isRequired: true,
     validators: [formValidators.notEmptyValidator],
@@ -12,7 +12,7 @@ export const bookingEditFormInput = [
   {
     tag: "FinishDate",
     name: "finishDate",
-    type: "date",
+    type: "datetime-local",
     defaultValue: "",
     isRequired: true,
     validators: [formValidators.notEmptyValidator],

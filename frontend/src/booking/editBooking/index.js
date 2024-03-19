@@ -34,21 +34,23 @@ export default function BookingEdit(){
     setVisible,
     id
   );
-  const [owners, setOwners] = useFetchState([], `/api/v1/owners`,jwt,setMessage,setVisible);
-  const [rooms, setRooms] = useFetchState([], `/api/v1/bookings/rooms`,jwt,setMessage,setVisible);
-  const [dataLoaded, setDataLoaded] = useState(false);
-  const bookingUser = owners.find(own => own.user.id == user.id)
 
+  const [owners, setOwners] = useFetchState([], `/api/v1/owners`,jwt,setMessage,setVisible);
+  const [rooms, setRooms] = useFetchState([], `/api/v1/bookings/rooms/${user.id}`,jwt,setMessage,setVisible);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  const bookingUser = owners.find(own => own.user.id == user.id);
+  const [pets, setPets] = useFetchState([], `/api/v1/adoptions/pets`,jwt,setMessage,setVisible);
+  const owner = pets.find(pet => pet.owner.user.id === user.id)?.owner;
+  
   const editAdoptionFormRef = useRef(null);
 
   function handleSubmit({ values }) {
     if (!editAdoptionFormRef.current.validate()) return;
-      const roomName = rooms.find(room => room.name === values.romm)
-      values['room'] = booking.room
-      values['startDate'] = booking.startDate
-      values['finishDate'] = booking.finishDate
-      values['pet'] = booking.pet
-      values['bookingUser'] = bookingUser
+      const roomName = rooms.find(room => room.name === values.room)
+      const pet = pets.find(p => p.name === values.pet)
+      values['room'] = roomName
+      values['pet'] = pet
+      values['owner'] = owner
       console.log(values)
       fetch(`/api/v1/bookings`, {
         method: "POST",
@@ -91,11 +93,21 @@ export default function BookingEdit(){
           <FormGenerator
             ref={editAdoptionFormRef}
             inputs={[
+              ...bookingEditFormInput,
               {
                 tag: 'Room',
                 name: 'room',
                 type: 'select',
-                values: [...rooms.filter(room => room.owner.user.id === user.id && room.name).map(room => room.name)],
+                values: [...rooms.map(room => room.name)],
+                defaultValue: '',
+                isRequired: true,
+                validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
+              },
+              {
+                tag: 'Pet',
+                name: 'pet',
+                type: 'select',
+                values: [...pets.filter(pet => pet.owner.user.id === user.id && pet.name).map(pet => pet.name)],
                 defaultValue: '',
                 isRequired: true,
                 validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],

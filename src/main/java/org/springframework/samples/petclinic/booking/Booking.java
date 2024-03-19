@@ -13,6 +13,7 @@ import org.springframework.samples.petclinic.pet.PetHotelRoom;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
@@ -38,19 +39,19 @@ public class Booking extends BaseEntity {
     private Date finishDate;
 
     @Valid
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
     @JoinColumn(name = "pet_id")
 	@OnDelete(action = OnDeleteAction.CASCADE)
     private Pet pet;
 
     @Valid
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
     @JoinColumn(name = "room_id")
 	@OnDelete(action = OnDeleteAction.CASCADE)
     private PetHotelRoom room;
 
     @Valid
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
     @JoinColumn(name = "owner_id")
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Owner owner;
