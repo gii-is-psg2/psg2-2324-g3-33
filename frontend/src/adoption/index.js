@@ -203,7 +203,7 @@ export default function AdoptionList (){
       <div className="admin-page-container">
         <h1 className="text-center">ADOPTIONS</h1>
         <div>
-          <Table aria-label="pethotelrooms" className="mt-4">
+          <Table aria-label="Adoptions" className="mt-4">
             <thead>
               <tr>
                 <th width="15%" className="text-center">Pet Ower</th>

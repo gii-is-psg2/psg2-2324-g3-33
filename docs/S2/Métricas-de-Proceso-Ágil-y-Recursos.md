@@ -12,5 +12,5 @@
 ## Total de puntos de historia entregados Sprint 1 
 En el Sprint 1 se han entregado 43 puntos de historia.
 
-## Total de puntos de historia entregados Sprint 2 
+## Total de puntos de historia entregados Sprint 2 #83
 En el Sprint 2 se han entregado 61 puntos de historia.
