@@ -64,6 +64,10 @@ export default function BookingEdit(){
         if (res.status === 201) {
           window.location.href = "/booking";
         }
+        else{
+          setMessage("Ya hay una reserva para la misma mascota o la misma habitación");
+          setVisible(true);   
+        } 
       })
       .catch((err) => {
         setMessage(err.message);

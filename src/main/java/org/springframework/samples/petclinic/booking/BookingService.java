@@ -39,15 +39,14 @@ public class BookingService {
 		
 		Iterable<Booking> currentBookings = bookingRepository.findAll();
 		for (Booking currentBooking : currentBookings) {
-			if(currentBooking.getOwner().getId().equals(booking.getOwner().getId())){
-				if (currentBooking.getStartDate().before(booking.getStartDate()) &&
+				if ((currentBooking.getStartDate().before(booking.getStartDate()) || 
+				currentBooking.getStartDate().equals(booking.getStartDate())) &&
 				currentBooking.getFinishDate().after(booking.getStartDate())
 				&& (currentBooking.getPet().getId().equals(booking.getPet().getId()) ||
 				currentBooking.getRoom().getId().equals(booking.getRoom().getId()))
 				) {
 					throw new IllegalArgumentException("Ya hay una reserva para la misma mascota o la misma habitación.");
 				}
-			}
 
 		}
 		
