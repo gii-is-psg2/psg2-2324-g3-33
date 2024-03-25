@@ -113,3 +113,5 @@ INSERT INTO consultation_tickets(id,description,creation_date, user_id, consulta
 INSERT INTO consultation_tickets(id,description,creation_date, user_id, consultation_id) VALUES (8, 'Lovebirds do not sing.', '2023-02-24 18:30', 16, 4);
 
 INSERT INTO pet_hotel_room(id,name,allowed_type_id,associated_clinic,square_metters) VALUES(1,'PetHotelRoomAlberto',2,1,50);
+
+INSERT INTO adoption(id,description,pet_owner_id,adopter_id,pet_id) VALUES (1,'Me gustaria adoptar a Leo, porque me encantan los gatos',1,10,1);
