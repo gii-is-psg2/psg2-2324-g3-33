@@ -66,7 +66,7 @@ export default function ConsultationListClinicOwner() {
             <td>There are no consultations with those filter and search parameters.</td>
         </tr>
     else consultationList = consultationService.getConsultationList([consultations, setConsultations],
-        [filtered, setFiltered], [alerts, setAlerts], setMessage, setVisible);
+        [filtered, setFiltered], [alerts, setAlerts], setMessage, setVisible, null, user.roles[0]);
     const modal = getErrorModal(setVisible, visible, message);
 
     return (

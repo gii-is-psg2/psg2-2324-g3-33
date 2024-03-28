@@ -85,7 +85,6 @@ public class PetHotelRoomController {
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<PetHotelRoom> createPetHotelRoom(@RequestBody @Valid String jsoString) throws JsonMappingException, JsonProcessingException{
         PetHotelRoom newRoom=new PetHotelRoom();
-        System.out.println(jsoString);
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(jsoString);
         newRoom.setName(jsonNode.get("name").asText());
