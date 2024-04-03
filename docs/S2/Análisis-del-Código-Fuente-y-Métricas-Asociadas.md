@@ -169,7 +169,10 @@ El impacto de este bug es principalmente en la legibilidad y el mantenimiento de
 **Soluciones:**
 La solución es refactorizar el método getPetHotelRoomsByClinicOwnerUserId para utilizar un pipeline de stream en lugar de iterar manualmente sobre la lista. Esto puede mejorar la legibilidad del código y potencialmente mejorar su rendimiento.
 
+---
+
 ### Code Smells del Frontend
+
 **Nombre:**
 Remove this unused import ...
 
@@ -184,6 +187,8 @@ Este code smell no interfiere en la funcionalidad del sistema.
 
 **Soluciones:**
 Eliminar la importación.
+
+---
 
 **Nombre:**
 x is already declared in the upper scope
@@ -200,6 +205,8 @@ Este code smell interfiere en la legibilidad del código.
 **Soluciones:**
 Cambiar el nombre por alguno que no se esté usando.
 
+---
+
 **Nombre:**
 Refactor this function to reduce its Cognitive Complexity from x to the 15 allowed.
 
@@ -214,6 +221,8 @@ Este code smell interfiere en la legibilidad del código.
 
 **Soluciones:**
 Refactorizar la función para que sea más legible.
+
+---
 
 **Nombre:**
 Remove this useless assignment to variable.
@@ -230,6 +239,8 @@ Este code smell no interfiere en la funcionalizad del sistema, pero tampoco en l
 **Soluciones:**
 Eliminar la variable.
 
+---
+
 **Nombre:**
 'xxx' import is duplicated.
 
@@ -244,6 +255,8 @@ Este code smell no interfiere en la funcionalizad del sistema, pero tampoco en l
 
 **Soluciones:**
 Eliminar una de las importaciones o comprimir las importaciones en una sola.
+
+---
 
 ### Code Smells del Backend
 
@@ -262,6 +275,8 @@ Este code smell no interfiere en la funcionalidad del sistema.
 **Soluciones:**
 Eliminar la importación.
 
+---
+
 **Nombre:**
 Define a constant instead of duplicating this literal "xxx" n times.
 
@@ -276,6 +291,8 @@ Este code smell no afecta a la funcionalidad del sistema.
 
 **Soluciones:**
 Crear una constante y utilizarla cuando sea necesario.
+
+---
 
 **Nombre:**
 Remove the declaration of thrown exception 'java.net.URISyntaxException', as it cannot be thrown from method's body
@@ -292,6 +309,8 @@ Este code smell no afecta a la funcionalidad del sistema, pero si afecta en la l
 **Soluciones:**
 Eliminar la declaracion de la excepción.
 
+---
+
 **Nombre:**
 This block of commented-out lines of code should be removed.
 
@@ -306,6 +325,8 @@ Este code smell no afecta a la funcionalidad del sistema, pero si afecta en la l
 
 **Soluciones:**
 Eliminar el código comentado.
+
+---
 
 **Nombre:**
 Make this "xxx" field final
