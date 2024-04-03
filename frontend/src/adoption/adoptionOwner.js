@@ -10,43 +10,13 @@ import useFetchState from "../util/useFetchState";
 const user = tokenService.getUser();
 const jwt = tokenService.getLocalAccessToken();
 
-export default function AdoptionList (){
+export default function AdoptionOwnerList (){
     const [message, setMessage] = useState(null);
     const [visible, setVisible] = useState(false);
     const [alerts, setAlerts] = useState([]);
     const [petAdoptions, setPetAdoptions] = useFetchState([],`/api/v1/adoptions`,jwt,setMessage,setVisible);
-    const [petAdoptionList, setPetAdoptionList] = useState([]);
-    const [petAdoptionOwnList, setPetAdoptionOwnList] = useState([]);
-
-    useEffect(() => {
-      const requestList = petAdoptions.map((adoption) => {
-        if(!adoption.adopter && adoption.petOwner.user.id != user.id){
-          return (
-            <tr key={adoption.id}>
-              <td className="text-center">{adoption.petOwner.firstName}</td>
-              <td className="text-center">{adoption.pet.name}</td>
-              <td className="text-center">{adoption.pet.type.name}</td>
-              <td className="text-center">{adoption.pet.birthDate}</td>
-              <td className="text-center">{adoption.adopter? adoption.adopter.firstName: 'None'}</td>
-              <td className="text-center">{adoption.description}</td>
-              <td className="text-center">
-                <ButtonGroup> 
-                  <Button
-                    size="sm"
-                    color="primary"
-                    aria-label={"adopt-"+adoption.id}
-                    tag={Link}
-                    to={"/adoption/"+adoption.id}
-                  >
-                    Adopt
-                  </Button>
-                </ButtonGroup>
-              </td>
-            </tr>
-          );
-        }})
-      setPetAdoptionList(requestList)
-    },[petAdoptions, user])
+    const [petAdoptionOffersList, setPetAdoptionOffersList] = useState([]);
+    const [petAdoptionRequestsList, setPetAdoptionRequestsList] = useState([]);
 
     useEffect(() => {
       const requestList = petAdoptions.map((adoption) => {
@@ -61,33 +31,69 @@ export default function AdoptionList (){
               <td className="text-center">{adoption.adopter? adoption.adopter.firstName: 'None'}</td>
               <td className="text-center">{adoption.description}</td>
               <td className="text-center">
-                <ButtonGroup>
-                  {adoption.description.length >0 && <Button
-                    size="sm"
-                    color= "success"
-                    aria-label={"acept-"+adoption.id}
-                    tag={Link}
-                    onClick={() => {aceptAdoption(adoption.pet, adoption.adopter, adoption.id)}}
-                  >
-                    Acept
-                  </Button>}
-                  {adoption.description.length >0 && <Button
-                    size="sm"
-                    color= "warning"
-                    aria-label={"acept-"+adoption.id}
-                    tag={Link}
-                    onClick={() => {notAdopt(adoption.petOwner, adoption.pet, adoption.id)}}
-                  >
-                    No acept
-                  </Button>}
-                </ButtonGroup>
+                <Button
+                size="sm"
+                color= "danger"
+                aria-label={"delete-"+adoption.id}
+                tag={Link}
+                onClick={() => {deleteFromList(
+                    `/api/v1/adoptions/${adoption.id}`,
+                    adoption,
+                    [petAdoptions, setPetAdoptions],
+                    [alerts, setAlerts],
+                    setMessage,
+                    setVisible
+                ); window.location.href = "/adoption";}}
+                >
+                Delete
+                </Button>
               </td>
             </tr>
           );
         }
-      })
-        setPetAdoptionOwnList(requestList)
+      });
+      setPetAdoptionOffersList(requestList)
     },[petAdoptions, user])
+
+    useEffect(() => {
+        const requestList = petAdoptions.map((adoption) => {
+          if(adoption.adopter? adoption.adopter.user.id === user.id : false){
+            return (
+              <tr key={adoption.id}>
+                <td className="text-center">{adoption.petOwner.firstName}</td>
+                <td className="text-center">{adoption.pet.name}</td>
+                <td className="text-center">{adoption.pet.type.name}</td>
+                <td className="text-center">{adoption.pet.birthDate}</td>
+                <td className="text-center">{adoption.adopter? adoption.adopter.firstName: 'None'}</td>
+                <td className="text-center">{adoption.description}</td>
+                <td className="text-center">
+                  <ButtonGroup>
+                    <Button
+                      size="sm"
+                      color="primary"
+                      aria-label={"edit-"+adoption.id}
+                      tag={Link}
+                      to={"/adoption/"+adoption.id}
+                    >
+                      Edit Description
+                    </Button>
+                    <Button
+                      size="sm"
+                      color="danger"
+                      aria-label={"notAdopt-"+adoption.id}
+                      tag={Link}
+                      onClick={() => {notAdopt(adoption.petOwner, adoption.pet, adoption.id)}}
+                    >
+                      Not adopt
+                    </Button>
+                  </ButtonGroup>
+                </td>
+              </tr>
+            );
+          }
+        });
+        setPetAdoptionRequestsList(requestList)
+      },[petAdoptions, user])
 
     function notAdopt(petOwner, pet, id){
       let editAdoption = {}
@@ -115,48 +121,10 @@ export default function AdoptionList (){
 
     }
 
-    function aceptAdoption(pet, adopter, adoptionId){
-      console.log(adoptionId)
-      let editPet = {...pet}
-      editPet['owner'] = adopter
-      fetch(`/api/v1/pets/${pet.id}`, { 
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${jwt}`,
-        },
-        body: JSON.stringify(editPet),
-      })
-      .then((res) => {
-        if (res.status === 200) {
-          window.location.href = "/myPets";
-        }
-      })
-      .catch((err) => {
-        setMessage(err.message);
-      });
-      fetch(`/api/v1/adoptions/${adoptionId}`, { 
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${jwt}`,
-        },
-      })
-    }
-
   return (
     <div>
       <div className="admin-page-container">
-        <h1 className="text-center">Adoptions</h1>
-        <Button
-          size="sm"
-          style={{color: "blue", backgroundColor: "white"}}
-          aria-label={"Created-Adoption"}
-          tag={Link}
-          to={"/adoption/Owner/"+user.id}
-          >
-            My adoptions
-          </Button>
+        <h1 className="text-center">My adoption offers</h1>
         <div>
           <Table aria-label="Adoptions" className="mt-4">
             <thead>
@@ -170,10 +138,10 @@ export default function AdoptionList (){
                 <th width="30%" className="text-center">Actions</th>
               </tr>
             </thead>
-            <tbody>{petAdoptionList}</tbody>
+            <tbody>{petAdoptionOffersList}</tbody>
           </Table>
         </div>
-        <h1>Adoptions pending confirmation</h1>
+        <h1 className="text-center">My adoption requests</h1>
         <div>
           <Table aria-label="Adoptions" className="mt-4">
             <thead>
@@ -187,7 +155,7 @@ export default function AdoptionList (){
                 <th width="30%" className="text-center">Actions</th>
               </tr>
             </thead>
-            <tbody>{petAdoptionOwnList}</tbody>
+            <tbody>{petAdoptionRequestsList}</tbody>
           </Table>
         </div>
         <Button
