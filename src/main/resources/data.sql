@@ -113,3 +113,11 @@ INSERT INTO consultation_tickets(id,description,creation_date, user_id, consulta
 INSERT INTO consultation_tickets(id,description,creation_date, user_id, consultation_id) VALUES (8, 'Lovebirds do not sing.', '2023-02-24 18:30', 16, 4);
 
 INSERT INTO pet_hotel_room(id,name,allowed_type_id,associated_clinic,square_metters) VALUES(1,'PetHotelRoomAlberto',2,1,50);
+INSERT INTO pet_hotel_room(id,name,allowed_type_id,associated_clinic,square_metters) VALUES(2,'PetHotelRoomAle',1,1,50);
+
+INSERT INTO adoption(id,description,pet_owner_id,adopter_id,pet_id) VALUES (1,'Me gustaria adoptar a Leo, porque me encantan los gatos',1,10,1);
+INSERT INTO adoption(id,description,pet_owner_id,adopter_id,pet_id) VALUES (2,'',10,null,12);
+
+INSERT INTO booking(id,start_date,finish_date,pet_id,room_id,owner_id) VALUES (1,'2023-02-24 18:30','2023-02-26 18:30',1,1,1);
+INSERT INTO booking(id,start_date,finish_date,pet_id,room_id,owner_id) VALUES (2,'2023-01-27 18:30','2023-01-28 18:30',7,2,6);
+INSERT INTO booking(id,start_date,finish_date,pet_id,room_id,owner_id) VALUES (3,'2023-01-29 18:30','2023-01-30 18:30',3,1,3);
