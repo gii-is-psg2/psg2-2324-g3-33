@@ -61,7 +61,7 @@ Podemos distinguir entre el backend y el frontend:
 
 ### Bugs del Frontend
 
-![BUG](../../frontend/src/static/images/BUG1.JPG)
+![BUG](../../frontend/src/static/images/bug1.JPG)
 
 **Nombre:** 
 Remove this conditional structure or edit its code           blocks so that they're not all the same.
@@ -82,7 +82,7 @@ Aunque técnicamente no es un error que causará una falla inmediata en el progr
                       
 ---          
 
- ![BUG](../../frontend/src/static/images/BUG2.JPG)
+ ![BUG](../../frontend/src/static/images/bug2.JPG)
 
 **Nombre:** 
 Unexpected missing generic font family
@@ -102,7 +102,7 @@ Se recomienda definir siempre una familia de fuentes genérica para cada declara
 
 ---
 
-![BUG](../../frontend/src/static/images/BUG3.JPG)
+![BUG](../../frontend/src/static/images/bug3.JPG)
 
 **Nombre:**
 Unexpected duplicate "position"
@@ -122,7 +122,7 @@ Para corregir este problema, simplemente elimina una de las instancias duplicada
 
 --- 
 
-![BUG](../../frontend/src/static/images/BUG4.JPG)
+![BUG](../../frontend/src/static/images/bug4.JPG)
 
 **Nombre:**
 Unexpected duplicate "height"
