@@ -31,3 +31,55 @@ En el Sprint 1 se ha entregado el 100% de los puntos de historia de usuario dura
 ## Porcentaje de puntos de historia de usuario entregados Sprint 2
 En el Sprint 1 se ha entregado el 100% de los puntos de historia de usuario.
 
+# Calendario Niko Niko
+
+| Day           | Alberto Escobar Sanchez   | Luis Giraldo Santiago     | Diego Manzanos Anento     | Alejandro Sevillano Barea     | Alejandro Vargas Muñiz     |
+| ------------- | ------------- | -------------  | -------------  | -------------  | -------------  |
+| 29/02|    |    |    |    |    |
+| 30/02|    |    |    |    |    |
+| 31/02|    |    |    |    |    |
+| 01/03|    |    |    |    |    |
+| 02/03|    |    |    |    |    |
+| 03/03|    |    |    |    |    |
+| 04/03|    |    |    |    |    |
+| 05/03|:smiley:    | :smiley:   |  :smiley:  |  :smiley:   |  :smiley:  |
+| 06/03|    |    |    |    |    |
+| 07/03|    |    |    |    |    |
+| 08/03|    | :smiley:   |    |    | :smiley:   |
+| 09/03|    |    |    |    |    |
+| 10/03|    |    |    |    |  :smiley:  |
+| 11/03|    |    |    |    |  :smiley:  |
+| 12/03|:smiley:    | :neutral_face:   | :smiley:   | :smiley:   |  :neutral_face:  |
+| 13/03|    | :fearful:    |    |    | :neutral_face:   |
+| 14/03|    |  :smiley:  |    |    |  :neutral_face:  |
+| 15/03|    |    |    |    |    |
+| 16/03|    |    |    |    | :neutral_face:   |
+| 17/03|    |    |    |    |    |
+| 18/03|    |    |    |    |  :neutral_face:  |
+| 19/03|:smiley:    | :neutral_face:   |  :neutral_face:  |    |  :smiley:  |
+| 20/03|    |    |    |    | :smiley:   |
+| 21/03|    |    |    |    |  :smiley:  |
+| 22/03|    |    |    |    |    |
+| 23/03|    |    |    |    |    |
+| 24/03|    |  :fearful:    |    |    |    |
+| 25/03|    |  :smiley:  |    |    |  :smiley:  |
+| 26/03|    |    |    |    |  :smiley:  |
+| 27/03|    |    |    |    | :smiley:   |
+| 28/03|    |    |  :worried:  |    | :smiley:   |
+| 29/03|:smiley:    | :neutral_face:    |    |    |  :smiley:  |
+| 30/03|:smiley:    |    |    |    |    |
+| 31/03|    |    |  :smiley:  | :neutral_face:   |    |
+| 01/04|    |    |    | :smiley:   |    |
+| 02/04|    |    |  :neutral_face:  | :worried:   |  :smiley:  |
+| 03/04|    | :smiley:   | :worried:   | :worried:    |  :smiley:  |
+
+### Definición de las medidas 
+
+| Day           | Miembro A  |
+| ------------- | ------------- |
+| Day 1         |    :smiley: (Es decir que estoy aprendiendo, me gusta el trabajo y creo que puedo hacerlo sin problemas, pero con algo de esfuerzo)) |
+| Day 2         |    - (Lo que significa que no trabajé en relación con el proyecto PSG2.)           |
+| Day 3         |    :neutral_face:  (Es decir, siento que tuve que luchar, pero el trabajo asignado fue justo y el día productivo.)          |
+| Day 4         |    :worried: (Es decir, siento que tengo serias dificultades para realizar la tarea, o que la productividad de mi día fue pésima.)           |
+| Day 5         |    :fearful:   (Estoy desesperado necesito ayuda)        |
+
