@@ -41,6 +41,8 @@ export default function BookingEdit(){
   const bookingUser = owners.find(own => own.user.id == user.id);
   const [pets, setPets] = useFetchState([], `/api/v1/adoptions/pets`,jwt,setMessage,setVisible);
   const owner = pets.find(pet => pet.owner.user.id === user.id)?.owner;
+  const [selectedRooms, setSelectedRooms] = useState([]);
+  const [selectedPets, setSelectedPets] = useState([]);
   
   const editAdoptionFormRef = useRef(null);
 
@@ -87,6 +89,22 @@ export default function BookingEdit(){
     }
   }, [booking]);
 
+    const handleChangeRoom = (event) => {
+      const roomName = event.target.value;
+      const room = rooms.filter(room => room.name === roomName).map(room => room);
+      setSelectedRooms(room);
+      console.log(room);
+    }
+
+    const handleChangePet = (event) => {
+      const petName = event.target.value;
+      const pet = pets.filter(pet => pet.name === petName).map(pet => pet);
+      setSelectedPets(pet);
+  
+    }
+
+
+
   const modal = getErrorModal(setVisible, visible, message);
   return (
     <div className="auth-page-container">
@@ -102,19 +120,21 @@ export default function BookingEdit(){
                 tag: 'Room',
                 name: 'room',
                 type: 'select',
-                values: [...rooms.map(room => room.name)],
+                values: [...rooms.filter(room => (selectedPets.length > 1? selectedPets.type.name === room.allowedType.name: true)).map(room => room.name)],
                 defaultValue: '',
                 isRequired: true,
                 validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
+                onchange: handleChangeRoom
               },
               {
                 tag: 'Pet',
                 name: 'pet',
                 type: 'select',
-                values: [...pets.filter(pet => pet.owner.user.id === user.id && pet.name).map(pet => pet.name)],
+                values: [...pets.filter(pet => pet.owner.user.id === user.id && pet.name && (selectedRooms.length > 1 ? pet.type.name === selectedRooms.allowedType.name : true)).map(pet => pet.name)],
                 defaultValue: '',
                 isRequired: true,
                 validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
+                onchange: handleChangePet
               }
             ]}
             onSubmit={handleSubmit}
