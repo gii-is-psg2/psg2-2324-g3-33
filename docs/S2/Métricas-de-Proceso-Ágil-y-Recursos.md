@@ -12,5 +12,11 @@
 ## Total de puntos de historia entregados Sprint 1 
 En el Sprint 1 se han entregado 43 puntos de historia.
 
+# SPRINT 2
+
+## Gráfico Burn Down 
+
+![Burn Down](../../frontend/src/static/images/BurnDown%20Chart%20Sprint2.png)
+
 ## Total de puntos de historia entregados Sprint 2 #83
 En el Sprint 2 se han entregado 61 puntos de historia.
