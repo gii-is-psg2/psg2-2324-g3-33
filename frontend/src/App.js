@@ -50,6 +50,7 @@ import ConsultationEditClinicOwner from "./clinicOwner/consultations/Consultatio
 import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
 import AdoptionList from "./adoption/index";
+import AdoptionOwnerList from "./adoption/adoptionOwner";
 import AdoptionEdit from "./adoption/editAdoption/index";
 import BookingList from "./booking/index";
 import BookingEdit from "./booking/editBooking/index";
@@ -120,6 +121,7 @@ function App() {
           <Route path="/consultations/:consultationId" exact={true} element={<PrivateRoute><OwnerConsultationEdit /></PrivateRoute>} />
           <Route path="/consultations/:consultationId/tickets" exact={true} element={<PrivateRoute><OwnerConsultationTickets /></PrivateRoute>} />
           <Route path="/adoption" exact={true} element={<PrivateRoute><AdoptionList /></PrivateRoute>}></Route>
+          <Route path="/adoption/owner/:id" exact={true} element={<PrivateRoute><AdoptionOwnerList /></PrivateRoute>}></Route>
           <Route path="/adoption/:id" exact={true} element={<PrivateRoute><AdoptionEdit /></PrivateRoute>}></Route>
           <Route path="/booking" exact={true} element={<PrivateRoute><BookingList /></PrivateRoute>}></Route>
           <Route path="/booking/:id" exact={true} element={<PrivateRoute><BookingEdit /></PrivateRoute>}></Route>

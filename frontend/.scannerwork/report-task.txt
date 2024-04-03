@@ -1,0 +1,6 @@
+projectKey=PSG2-2324-G3-33-frontend
+serverUrl=https://oitilo.us.es/sonar
+serverVersion=8.9.7.52159
+dashboardUrl=https://oitilo.us.es/sonar/dashboard?id=PSG2-2324-G3-33-frontend
+ceTaskId=AY6J3d-1HfZai0jqMLmk
+ceTaskUrl=https://oitilo.us.es/sonar/api/ce/task?id=AY6J3d-1HfZai0jqMLmk

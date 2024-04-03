@@ -16,93 +16,11 @@ export default function AdoptionList (){
     const [alerts, setAlerts] = useState([]);
     const [petAdoptions, setPetAdoptions] = useFetchState([],`/api/v1/adoptions`,jwt,setMessage,setVisible);
     const [petAdoptionList, setPetAdoptionList] = useState([]);
+    const [petAdoptionOwnList, setPetAdoptionOwnList] = useState([]);
 
     useEffect(() => {
       const requestList = petAdoptions.map((adoption) => {
-        let owner = adoption.petOwner.user
-        if(owner.id == user.id){ 
-          return (
-          <tr key={adoption.id}>
-              <td className="text-center">{adoption.petOwner.firstName}</td>
-              <td className="text-center">{adoption.pet.name}</td>
-              <td className="text-center">{adoption.pet.type.name}</td>
-              <td className="text-center">{adoption.pet.birthDate}</td>
-              <td className="text-center">{adoption.adopter? adoption.adopter.firstName: 'None'}</td>
-              <td className="text-center">{adoption.description}</td>
-              <td className="text-center">
-                <ButtonGroup>
-                  <Button
-                    size="sm"
-                    color= "danger"
-                    aria-label={"delete-"+adoption.id}
-                    tag={Link}
-                    onClick={() => {deleteFromList(
-                      `/api/v1/adoptions/${adoption.id}`,
-                      adoption,
-                      [petAdoptions, setPetAdoptions],
-                      [alerts, setAlerts],
-                      setMessage,
-                      setVisible
-                    ); window.location.href = "/adoption";}}
-                  >
-                    Delete
-                  </Button> 
-                  {adoption.description.length >0 && <Button
-                    size="sm"
-                    color= "success"
-                    aria-label={"acept-"+adoption.id}
-                    tag={Link}
-                    onClick={() => {aceptAdoption(adoption.pet, adoption.adopter, adoption.id)}}
-                  >
-                    Acept
-                  </Button>}
-                  {adoption.description.length >0 && <Button
-                    size="sm"
-                    color= "warning"
-                    aria-label={"acept-"+adoption.id}
-                    tag={Link}
-                    onClick={() => {notAdopt(adoption.petOwner, adoption.pet, adoption.id)}}
-                  >
-                    No acept
-                  </Button>}
-                </ButtonGroup>
-              </td>
-            </tr>
-          );
-        } else if(adoption.adopter? adoption.adopter.user.id === user.id : false){
-          return (
-            <tr key={adoption.id}>
-              <td className="text-center">{adoption.petOwner.firstName}</td>
-              <td className="text-center">{adoption.pet.name}</td>
-              <td className="text-center">{adoption.pet.type.name}</td>
-              <td className="text-center">{adoption.pet.birthDate}</td>
-              <td className="text-center">{adoption.adopter? adoption.adopter.firstName: 'None'}</td>
-              <td className="text-center">{adoption.description}</td>
-              <td className="text-center">
-                <ButtonGroup>
-                  <Button
-                    size="sm"
-                    color="primary"
-                    aria-label={"edit-"+adoption.id}
-                    tag={Link}
-                    to={"/adoption/"+adoption.id}
-                  >
-                    Edit
-                  </Button>
-                  <Button
-                    size="sm"
-                    color="danger"
-                    aria-label={"notAdopt-"+adoption.id}
-                    tag={Link}
-                    onClick={() => {notAdopt(adoption.petOwner, adoption.pet, adoption.id)}}
-                  >
-                    Not adopt
-                  </Button>
-                </ButtonGroup>
-              </td>
-            </tr>
-          );
-        }else if(!adoption.adopter){
+        if(!adoption.adopter && adoption.petOwner.user.id != user.id){
           return (
             <tr key={adoption.id}>
               <td className="text-center">{adoption.petOwner.firstName}</td>
@@ -126,21 +44,49 @@ export default function AdoptionList (){
               </td>
             </tr>
           );
-        } else{
+        }})
+      setPetAdoptionList(requestList)
+    },[petAdoptions, user])
+
+    useEffect(() => {
+      const requestList = petAdoptions.map((adoption) => {
+        let owner = adoption.petOwner.user
+        if(owner.id == user.id){ 
           return (
-            <tr key={adoption.id}>
+          <tr key={adoption.id}>
               <td className="text-center">{adoption.petOwner.firstName}</td>
               <td className="text-center">{adoption.pet.name}</td>
               <td className="text-center">{adoption.pet.type.name}</td>
               <td className="text-center">{adoption.pet.birthDate}</td>
               <td className="text-center">{adoption.adopter? adoption.adopter.firstName: 'None'}</td>
-              <td className="text-center">Waiting for the owner to accept or reject the request</td>
-              <td className="text-center">None</td>
+              <td className="text-center">{adoption.description}</td>
+              <td className="text-center">
+                <ButtonGroup>
+                  {adoption.description.length >0 && <Button
+                    size="sm"
+                    color= "success"
+                    aria-label={"acept-"+adoption.id}
+                    tag={Link}
+                    onClick={() => {aceptAdoption(adoption.pet, adoption.adopter, adoption.id)}}
+                  >
+                    Acept
+                  </Button>}
+                  {adoption.description.length >0 && <Button
+                    size="sm"
+                    color= "warning"
+                    aria-label={"acept-"+adoption.id}
+                    tag={Link}
+                    onClick={() => {notAdopt(adoption.petOwner, adoption.pet, adoption.id)}}
+                  >
+                    No acept
+                  </Button>}
+                </ButtonGroup>
+              </td>
             </tr>
           );
         }
-      });
-      setPetAdoptionList(requestList)
+      })
+        setPetAdoptionOwnList(requestList)
     },[petAdoptions, user])
 
     function notAdopt(petOwner, pet, id){
@@ -201,7 +147,16 @@ export default function AdoptionList (){
   return (
     <div>
       <div className="admin-page-container">
-        <h1 className="text-center">ADOPTIONS</h1>
+        <h1 className="text-center">Adoptions</h1>
+        <Button
+          size="sm"
+          style={{color: "blue", backgroundColor: "white"}}
+          aria-label={"Created-Adoption"}
+          tag={Link}
+          to={"/adoption/Owner/"+user.id}
+          >
+            My adoptions
+          </Button>
         <div>
           <Table aria-label="Adoptions" className="mt-4">
             <thead>
@@ -216,6 +171,23 @@ export default function AdoptionList (){
               </tr>
             </thead>
             <tbody>{petAdoptionList}</tbody>
+          </Table>
+        </div>
+        <h1>Adoptions pending confirmation</h1>
+        <div>
+          <Table aria-label="Adoptions" className="mt-4">
+            <thead>
+              <tr>
+                <th width="15%" className="text-center">Pet Ower</th>
+                <th width="15%" className="text-center">Pet Name</th>
+                <th width="15%" className="text-center">Pet Type</th>
+                <th width="15%" className="text-center">Pet BirthDate</th>
+                <th width="15%" className="text-center">Adopter</th>
+                <th width="15%" className="text-center">Description</th>
+                <th width="30%" className="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>{petAdoptionOwnList}</tbody>
           </Table>
         </div>
         <Button
