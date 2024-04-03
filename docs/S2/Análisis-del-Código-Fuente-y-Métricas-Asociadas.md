@@ -61,6 +61,8 @@ Podemos distinguir entre el backend y el frontend:
 
 ### Bugs del Frontend
 
+![BUG](../../frontend/src/static/images/BUG1.JPG)
+
 **Nombre:** 
 Remove this conditional structure or edit its code           blocks so that they're not all the same.
 
@@ -79,7 +81,9 @@ Aunque técnicamente no es un error que causará una falla inmediata en el progr
 -La mejor opción sería esta: Simplificar el código quitando la estructura if-else y simplemente devolver response.json() directamente después de la llamada a fetch().
                       
 ---          
-          
+
+ ![BUG](../../frontend/src/static/images/BUG2.JPG)
+
 **Nombre:** 
 Unexpected missing generic font family
 
@@ -98,6 +102,8 @@ Se recomienda definir siempre una familia de fuentes genérica para cada declara
 
 ---
 
+![BUG](../../frontend/src/static/images/BUG3.JPG)
+
 **Nombre:**
 Unexpected duplicate "position"
 
@@ -115,6 +121,8 @@ Cuando se duplica una propiedad CSS en una regla, la segunda instancia generalme
 Para corregir este problema, simplemente elimina una de las instancias duplicadas para mantener el estilo coherente y evitar posibles confusiones en la interpretación del código CSS.
 
 --- 
+
+![BUG](../../frontend/src/static/images/BUG4.JPG)
 
 **Nombre:**
 Unexpected duplicate "height"
@@ -136,6 +144,10 @@ Para corregir este problema, simplemente elimina una de las instancias duplicada
 
 ### Bugs del Backend
 
+![BUG](../../frontend/src/static/images/bug5.JPG)
+
+![BUG](../../frontend/src/static/images/bug6.JPG)
+
 **Nombre:**
 Call "Optional#isPresent()" before accessing the value.
 (Agrupo dos bugs aquí, el de ClinicService y el de ClinicOwnerService)
@@ -153,6 +165,8 @@ El impacto de este bug es que el código puede lanzar una excepción NoSuchEleme
 La solución es verificar si el Optional está presente antes de acceder a su valor. Esto se puede hacer llamando a Optional#isPresent() o utilizando métodos como Optional#orElse() o Optional#orElseThrow() para proporcionar un valor predeterminado o lanzar una excepción si el Optional está vacío.
 
 ---
+
+![BUG](../../frontend/src/static/images/bug7.JPG)
 
 **Nombre:**
 Refactor the code so this stream pipeline is used.
