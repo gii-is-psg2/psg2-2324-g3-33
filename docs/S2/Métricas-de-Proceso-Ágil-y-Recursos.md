@@ -1,9 +1,7 @@
 # SPRINT 1
 ## Gráfico de control que muestra el tiempo de ciclo Sprint 1
 
-![Ciclo Sprint 1](https://hackmd.io/_uploads/Syfj1YVaa.jpg)
-
-![Cycle time bien hecho](https://hackmd.io/_uploads/S1YHN366a.jpg)
+![Cycle time ](../../frontend/src/static/images/Cycle%20time.JPG)
 
 ## Gráfico Burn Down 
 
