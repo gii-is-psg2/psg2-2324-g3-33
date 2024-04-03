@@ -342,3 +342,7 @@ Este code smell puede afectar a la funcionalidad del sistema, pero no en la legi
 
 **Soluciones:**
 Poner la variable como final.
+
+## Conclusiones
+
+A la vista de las métricas obtenidas, se concluye que hay demasiados code smells para la importancia que tienen, ya que algunos que se consideran bugs y no afectan a la funcionalidad del programa.
