@@ -168,3 +168,177 @@ El impacto de este bug es principalmente en la legibilidad y el mantenimiento de
 
 **Soluciones:**
 La solución es refactorizar el método getPetHotelRoomsByClinicOwnerUserId para utilizar un pipeline de stream en lugar de iterar manualmente sobre la lista. Esto puede mejorar la legibilidad del código y potencialmente mejorar su rendimiento.
+
+---
+
+### Code Smells del Frontend
+
+**Nombre:**
+Remove this unused import ...
+
+**Descripción:**
+Este code smell sugiere eliminar importaciones que no se están usando, ya qué son prescindibles en el archivo js.
+
+**Causas:** 
+Puede deberse a una importación que se usó en algún momento, pero que al cambiar o eliminar código ha quedado en desuso.
+
+**Evaluación:**
+Este code smell no interfiere en la funcionalidad del sistema.
+
+**Soluciones:**
+Eliminar la importación.
+
+---
+
+**Nombre:**
+x is already declared in the upper scope
+
+**Descripción:**
+Este code smell hace referencia a que estamos definiendo un parametro de por ejemplo un catch usando el nombre de una variable existente.
+
+**Causas:** 
+Olvidarse de que se usó un nombre de variable.
+
+**Evaluación:**
+Este code smell interfiere en la legibilidad del código.
+
+**Soluciones:**
+Cambiar el nombre por alguno que no se esté usando.
+
+---
+
+**Nombre:**
+Refactor this function to reduce its Cognitive Complexity from x to the 15 allowed.
+
+**Descripción:**
+Este code smell dice que una función tiene una complejidad alta, o sea, que tiene demasiadas difurcaciones condicionales.
+
+**Causas:** 
+Escribir un codigo sencillo pero no legible.
+
+**Evaluación:**
+Este code smell interfiere en la legibilidad del código.
+
+**Soluciones:**
+Refactorizar la función para que sea más legible.
+
+---
+
+**Nombre:**
+Remove this useless assignment to variable.
+
+**Descripción:**
+Este code smell hace referencia a que la variable no se está utilizando en ningún momento de la ejecución.
+
+**Causas:** 
+Definir variables pensando en el futuro y no acabar usándolas.
+
+**Evaluación:**
+Este code smell no interfiere en la funcionalizad del sistema, pero tampoco en la legibilidad.
+
+**Soluciones:**
+Eliminar la variable.
+
+---
+
+**Nombre:**
+'xxx' import is duplicated.
+
+**Descripción:**
+Este code smell hace referencia a que hay dos importaciones identicas.
+
+**Causas:** 
+Importar diferentes elementos de un mismo archivo.
+
+**Evaluación:**
+Este code smell no interfiere en la funcionalizad del sistema, pero tampoco en la legibilidad.
+
+**Soluciones:**
+Eliminar una de las importaciones o comprimir las importaciones en una sola.
+
+---
+
+### Code Smells del Backend
+
+**Nombre:**
+Remove this unused import ...
+
+**Descripción:**
+Este code smell sugiere eliminar importaciones que no se están usando, ya qué son prescindibles en el archivo js.
+
+**Causas:** 
+Puede deberse a una importación que se usó en algún momento, pero que al cambiar o eliminar código ha quedado en desuso.
+
+**Evaluación:**
+Este code smell no interfiere en la funcionalidad del sistema.
+
+**Soluciones:**
+Eliminar la importación.
+
+---
+
+**Nombre:**
+Define a constant instead of duplicating this literal "xxx" n times.
+
+**Descripción:**
+Este code smell hace referencia a que estamos declarando un mismo valor n veces.
+
+**Causas:** 
+No definir una constante con el valor referenciado.
+
+**Evaluación:**
+Este code smell no afecta a la funcionalidad del sistema.
+
+**Soluciones:**
+Crear una constante y utilizarla cuando sea necesario.
+
+---
+
+**Nombre:**
+Remove the declaration of thrown exception 'java.net.URISyntaxException', as it cannot be thrown from method's body
+
+**Descripción:**
+Este code smell hace referencia a que estamos declarando que una funcion puede lanzar una excepción.
+
+**Causas:** 
+Cambiar el código para que no lance una excepción, pero no eliminarlo en la declaración del método o función.
+
+**Evaluación:**
+Este code smell no afecta a la funcionalidad del sistema, pero si afecta en la legibilidad del código.
+
+**Soluciones:**
+Eliminar la declaracion de la excepción.
+
+---
+
+**Nombre:**
+This block of commented-out lines of code should be removed.
+
+**Descripción:**
+Este code smell hace referencia a que estamos dejando código comentado en alguna clase o archivo.
+
+**Causas:** 
+Cambiar el código comentando el antiguo para no borrarlo en caso de querer retroceder.
+
+**Evaluación:**
+Este code smell no afecta a la funcionalidad del sistema, pero si afecta en la legibilidad del código.
+
+**Soluciones:**
+Eliminar el código comentado.
+
+---
+
+**Nombre:**
+Make this "xxx" field final
+
+**Descripción:**
+Este code smell hace referencia a que se espera que una variable sea final en java, osea, una constante
+
+**Causas:** 
+Definir una variable sin final
+
+**Evaluación:**
+Este code smell puede afectar a la funcionalidad del sistema, pero no en la legibilidad del código.
+
+**Soluciones:**
+Poner la variable como final.
