@@ -91,6 +91,16 @@ Para utilizar este servicio debe ser propietario de clínica
 
 ## 4. PLAN DE PRECIOS
 
+Petclinic ha implementado una serie de planes de precio con el fin de brindar beneficios adicionales a los propietarios de clínicas veterinarias que utilizan la aplicación. Estos planes están diseñados para adaptarse a las diversas necesidades y requisitos de los usuarios. Entre ellos se encuentran el plan Básico, que establece el punto de partida para todos los clientes y ofrece todas las funcionalidades básicas pero con limitaciones considerables en varios parámetros dentro de la clínica, y no incluye SLA (Acuerdo de Nivel de Servicio). El plan Gold, por otro lado, es el primero en ofrecer funcionalidades adicionales, como Pet Hotel o Adopciones. Por último, el plan Platinum es el único que proporciona consultas en línea y ofrece un soporte más amplio para las solicitudes de cambio y de usuario.
+
+Las limitaciones específicas de cada plan se detallan en la siguiente tabla:
+
+| Plan     | Número de Mascotas | Número de Clínicas | Número de Veterinarios | Número de tipos de mascotas | Hotel Mascotas | Adopciones | Número de visitas mensuales | Consultas            | SLA |Precio x mes|
+|----------|---------------------|---------------------|-------------------------|-----------------------------|----------------|------------|-----------------------------|----------------------|-----|-----|
+| Básico   | 10                  | 1                   | 2                       | 3                           | ×              | ×          | 4                           | Presencial           | ×   |9,99€
+| Oro      | 20                  | 5                   | 4                       | 6                           | ✓              | ✓          | 8                           | Presencial           | ✓   |19,99€
+| Platino  | Ilimitado           | Ilimitado           | Ilimitado               | Ilimitado                   | ✓              | ✓          | Ilimitado                  | Presencial y en línea | ✓   |29,99€
+
 ## 5. DURACIÓN Y TERMINACIÓN
 
 ## 6. OTROS TÉRMINOS GENERALES
