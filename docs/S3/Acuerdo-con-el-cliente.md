@@ -88,6 +88,61 @@ Para la solicitud de estimaciones de cambios un propietario de clínica debera h
 Para utilizar este servicio debe ser propietario de clínica
 
 ## 3. SERVICIOS OFRECIDOS
+### 3.1. Métricas
+
+| Indicador | Definición | Frecuencia | Objetivo |
+|-----------|-----------|-----------|-----------|
+| Time to Own (TTO)  | Tiempo que transcurre desde que se registra la petición del usuario hasta que deja de estar pendiente.  | Por evento  | Según prioridad (en función de urgencia dada por el plan,e impacto)
+  |
+| Time to Resolve (TTR)  | Tiempo que transcurre desde que la petición deja de estar pendiente hasta que se resuelve  | Por evento  | Según prioridad (en función de urgencia dada por el plan,e impacto)
+  |
+| Disponibilidad  | (Periodos Totales - Periodos de Downtime) / Periodos Totales  | Por mes  | Según el plan  |
+
+- Periodos totales: ventanas de 10 minutos a lo largo de un mes.
+- Periodos de downtime: ventanas de 10 minutos en las que son erróneas más de un 10% de las peticiones de usuario
+
+### 3.2. Mecanismo de monitorización
+
+- TTO: mediante iTop.
+- TTR: mediante iTop.
+- Disponibilidad: integración en Google Cloud. Si no se cumple el objetivo definitivo, se crea un SLO con alerta automatizada.
+
+### 3.3. Periodos de soporte a los usuarios
+
+- Standard: de lunes a viernes de 9:00 a 22:00.
+- Avanzado: todos los días de 9:00 a 22:00.
+- Premium: todos los días de 7:00 a 23:59.
+
+### 3.4. Niveles SLA
+
+- Plan avanzado
+Disponibilidad: 97%
+
+| Prioridad | TTO (h) | TTR (h) |
+|-----------|-----------|-----------|
+| Alta  | 4  | 7  |
+| Media  | 13  | 27  |
+| Baja  | 27  | 51  |
+
+- Plan premium
+Disponibilidad: 99%
+
+| Prioridad | TTO (h) | TTR (h) |
+|-----------|-----------|-----------|
+| Alta  | 1  | 4  |
+| Media  | 4  | 7  |
+| Baja  | 13  | 27  |
+
+#### 3.4.1. Resolución de peticiones de usuario y cambios e incidentes
+
+### 3.5. Compensaciones
+
+- TTO con prioridad por debajo de la esperada: Se compensará con un 15% de descuento en la siguiente factura, por cada nivel de prioridad inferior al esperado.
+- TTR con prioridad por debajo de la esperada: Se compensará con un 15% de descuento en la siguiente factura, por cada nivel de prioridad inferior al esperado.
+- Disponibilidad por debajo de la esperada: Se compensará con un 15% de descuento en la siguiente factura, por cada 1% por debajo del porcentaje de disponibilidad esperado.
+
+Los descuentos aplicables se acumularán hasta un 50% de descuento, como máximo, en la siguiente factura.
+
 
 ## 4. PLAN DE PRECIOS
 
