@@ -3,3 +3,5 @@
 
 
 ## Captura de pantalla del portal de iTop.
+
+![Captura dle portal de iTop](Portal%20de%20iTop.png)
