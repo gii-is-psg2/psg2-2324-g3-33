@@ -115,7 +115,7 @@ Para utilizar este servicio debe ser propietario de clínica
 
 ### 3.4. Niveles SLA
 
-- Plan avanzado
+- Plan gold
 Disponibilidad: 97%
 
 | Prioridad | TTO (h) | TTR (h) |
@@ -124,7 +124,7 @@ Disponibilidad: 97%
 | Media  | 13  | 27  |
 | Baja  | 27  | 51  |
 
-- Plan premium
+- Plan platinum
 Disponibilidad: 99%
 
 | Prioridad | TTO (h) | TTR (h) |
