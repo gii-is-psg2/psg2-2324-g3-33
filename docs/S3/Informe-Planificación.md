@@ -50,7 +50,7 @@
 | 12  |  Falta de funciones en iTop y redactar las contribuciones de cada autor | Alejandro Vargas Muñiz   |
 | 13  | Captura de pantalla del portal iTop y dificultades en su configuración | Luis Giraldo Santiago  |
 | 14  | Preparar una versión del proyecto Petclinic | Alejandro Sevillano Barea   |
-| 15  | Integración del framework y configuración de las funcionalidades | Luis Giraldo Santiago  |
+| 15  | Integración del framework y configuración de las funcionalidades | Luis Giraldo Santiago, Alejandro Sevillano Barea |
 | 16  | Otros términos generales | Alberto Escobar Sánchez  |
 | 17  |  Requisitos de SLA | Diego Manzanos Anento    |
 | 18  | Métricas de SLA | Alejandro Vargas Muñiz    |
