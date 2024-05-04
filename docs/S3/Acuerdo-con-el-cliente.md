@@ -95,12 +95,11 @@ Petclinic ha implementado una serie de planes de precio con el fin de brindar be
 
 Las limitaciones específicas de cada plan se detallan en la siguiente tabla:
 
-| Plan     | Número de Mascotas | Número de Clínicas | Número de Veterinarios | Número de tipos de mascotas | Hotel de Mascotas | Adopciones | Número de visitas mensuales | Consultas            | SLA |Precio x mes|
-|----------|---------------------|---------------------|-------------------------|-----------------------------|----------------|------------|-----------------------------|----------------------|-----|-----|
-| Básico   | 10                  | 1                   | 2                       | 3                           | ×              | ×          | 4                           | Presencial           | ×   |9,99€
-| Oro      | 20                  | 5                   | 4                       | 6                           | ✓              | ✓          | 8                           | Presencial           | ✓   |19,99€
-| Platino  | 50           | 10           | 10               | 15                   | ✓              | ✓          | 15                  | Presencial y en línea | ✓   |29,99€
-
+| Plan | Número de Mascotas | Hotel de Mascotas |Adopciones | Número de visitas por mes y por mascota | Consultas online            | SLA |Precio mensual
+|----------|---------------------|---------------------|-------------------------|-----------------------------|----------------|------------|------------------------
+| Básico   | 2 | × | × | 1 | × |×|9,99€
+| Oro      | 4 | ✓ | ✓ | 3 | × | ✓ |19,99€
+| Platino  | 7 | ✓ | ✓ | 7 | ✓ | ✓ |29,99€
 
 ## 5. DURACIÓN Y TERMINACIÓN
 
