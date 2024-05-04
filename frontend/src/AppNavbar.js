@@ -70,10 +70,10 @@ function AppNavbar() {
                                     <p></p>
                             </Default>
                             <Loading>
-                                    <p>Loading...</p>
+                                    <p></p>
                             </Loading>
                             <ErrorFallback>
-                                    <p>An error occurred</p>
+                                    <p></p>
                             </ErrorFallback>
                     </Feature>
                     <NavItem>
@@ -81,7 +81,6 @@ function AppNavbar() {
                     </NavItem>
                     <Feature>
                             <On expression={feature("haveAdoptions")}>
-                                    <p>Adoptions is enabled</p>
                             <NavItem>
                                 <NavLink style={{ color: "white" }} tag={Link} to="/adoption">Adoption</NavLink>
                             </NavItem>
@@ -90,16 +89,15 @@ function AppNavbar() {
                                     <p></p>
                             </Default>
                             <Loading>
-                                    <p>Loading...</p>
+                                    <p></p>
                             </Loading>
                             <ErrorFallback>
-                                    <p>An error occurred</p>
+                                    <p></p>
                             </ErrorFallback>
                     </Feature>
                     
                     <Feature>
                             <On expression={feature("havePetHotel")}>
-                                    <p>Pet Hotel is enabled</p>
                             <NavItem>
                                 <NavLink style={{ color: "white" }} tag={Link} to="/booking">Booking</NavLink>
                              </NavItem>
@@ -108,10 +106,10 @@ function AppNavbar() {
                                     <p></p>
                             </Default>
                             <Loading>
-                                    <p>Loading...</p>
+                                    <p></p>
                             </Loading>
                             <ErrorFallback>
-                                    <p>An error occurred</p>
+                                    <p></p>
                             </ErrorFallback>
                     </Feature>
 
