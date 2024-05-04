@@ -45,11 +45,7 @@ public class SecurityConfiguration {
 
 	private static final String ADMIN = "ADMIN";
 	private static final String CLINIC_OWNER = "CLINIC_OWNER";
-
-	@Bean
-	public RenewTokenFilter renewTokenFilter() {
-		return new RenewTokenFilter();
-	}
+	
 	
 
 	@Bean
@@ -93,6 +89,11 @@ public class SecurityConfiguration {
 	@Bean
 	public AuthTokenFilter authenticationJwtTokenFilter() {
 		return new AuthTokenFilter();
+	}
+	
+	@Bean
+	public RenewTokenFilter renewTokenFilter() {
+		return new RenewTokenFilter();
 	}
 
 	@Bean

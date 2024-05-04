@@ -62,33 +62,32 @@ export default function PricingPlan () {
                   <ImTruck color="white" />
                 </div>
                 <h2>BASIC</h2>
-              </div>
+                </div>
               <div className="plan-price">
-                <h4>FREE</h4>
+                <h4>9,99</h4>
+
+                <h5>€</h5>
               </div>
               <div className="option">
                 <ul>
-                  <li>
-                    <BsDot color="white" /> 2 pets
-                  </li>
-                  <li>
-                    <BsDot color="white" /> 1 visit per month and pet
-                  </li>
-                  <li>
-                    <BsDot color="white" /> Low support priority
-                  </li>
-                  <li>
-                    <FaTimes color="red" /> Vet Selection for Visits
-                  </li>
-                  <li>
-                    <FaTimes color="red" /> Calendar with Upcoming Visits
-                  </li>
-                  <li>
-                    <FaTimes color="red" /> Dashboard of your Pets
-                  </li>
-                  <li>
-                    <FaTimes color="red" /> Online Consultation
-                  </li>
+                <li>
+                  <BsDot color="white" /> 2 pets
+                </li>
+                <li>
+                  <BsDot color="white" /> 1 visit per month and pet
+                </li>
+                <li>
+                  <FaTimes color="red" /> Pet Hotel
+                </li>
+                <li>
+                  <FaTimes color="red" /> Adoptions
+                </li>
+                <li>
+                  <FaTimes color="red" /> Online Consultation
+                </li>
+                <li>
+                  <FaTimes color="red" /> Service level agreement (SLA)
+                </li>
                 </ul>
               </div>
               {plan === "BASIC" ? (
@@ -106,33 +105,30 @@ export default function PricingPlan () {
                 <h2>GOLD</h2>
               </div>
               <div className="plan-price">
-                <h4>5</h4>
+                <h4>19,99</h4>
 
                 <h5>€</h5>
               </div>
               <div className="option">
                 <ul>
-                  <li>
-                    <BsDot color="white" /> 4 pets
-                  </li>
-                  <li>
-                    <BsDot color="white" /> 3 visit per month and pet
-                  </li>
-                  <li>
-                    <BsDot color="white" /> Medium support priority
-                  </li>
-                  <li>
-                    <FaCheck color="green" /> Vet Selection for Visits
-                  </li>
-                  <li>
-                    <FaCheck color="green" /> Calendar with Upcoming Visits
-                  </li>
-                  <li>
-                    <FaTimes color="red" /> Dashboard of your Pets
-                  </li>
-                  <li>
-                    <FaTimes color="red" /> Online Consultation
-                  </li>
+                <li>
+                  <BsDot color="white" /> 5 pets
+                </li>
+                <li>
+                  <BsDot color="white" /> 3 visits per month and pet
+                </li>
+                <li>
+                  <FaCheck color="green" /> Pet Hotel
+                </li>
+                <li>
+                  <FaCheck color="green" /> Adoptions
+                </li>
+                <li>
+                  <FaTimes color="red" /> Online Consultation
+                </li>
+                <li>
+                  <FaCheck color="green" /> Service level agreement (SLA)
+                </li>
                 </ul>
               </div>
               {plan === "GOLD" ? (
@@ -158,33 +154,30 @@ export default function PricingPlan () {
                 <h2>PLATINUM</h2>
               </div>
               <div className="plan-price">
-                <h4>12</h4>
+                <h4>29,99</h4>
 
                 <h5>€</h5>
               </div>
               <div className="option">
                 <ul>
-                  <li>
-                    <BsDot color="white" /> 7 pets
-                  </li>
-                  <li>
-                    <BsDot color="white" /> 6 visit per month and pet
-                  </li>
-                  <li>
-                    <BsDot color="white" /> High support priority
-                  </li>
-                  <li>
-                    <FaCheck color="green" /> Vet Selection for Visits
-                  </li>
-                  <li>
-                    <FaCheck color="green" /> Calendar with Upcoming Visits
-                  </li>
-                  <li>
-                    <FaCheck color="green" /> Dashboard of your Pets
-                  </li>
-                  <li>
-                    <FaCheck color="green" /> Online Consultation
-                  </li>
+                <li>
+                  <BsDot color="white" /> 10 pets
+                </li>
+                <li>
+                  <BsDot color="white" /> 5 visits per month and pet
+                </li>
+                <li>
+                  <FaCheck color="green" /> Pet Hotel
+                </li>
+                <li>
+                  <FaCheck color="green" /> Adoptions
+                </li>
+                <li>
+                  <FaCheck color="green" /> Online Consultation
+                </li>
+                <li>
+                  <FaCheck color="green" /> Service level agreement (SLA)
+                </li>
                 </ul>
               </div>
             {plan === "PLATINUM" ? (
