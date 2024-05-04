@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, NavLink, NavItem, Nav, NavbarText, NavbarToggler, 
 import { Link } from 'react-router-dom';
 import tokenService from './services/token.service';
 import jwt_decode from "jwt-decode";
+import { Feature, On, Default,ErrorFallback, Loading, feature } from "pricing4react";
 
 function AppNavbar() {
     const [roles, setRoles] = useState([]);
@@ -59,18 +60,61 @@ function AppNavbar() {
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/myPets">My Pets</NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink style={{ color: "white" }} tag={Link} to="/consultations">Consultations</NavLink>
-                    </NavItem>
+                    <Feature>
+                            <On expression={feature("haveOnlineConsultation")}>
+                            <NavItem>
+                                <NavLink style={{ color: "white" }} tag={Link} to="/consultations">Consultations</NavLink>
+                            </NavItem>
+                            </On>
+                            <Default>
+                                    <p></p>
+                            </Default>
+                            <Loading>
+                                    <p>Loading...</p>
+                            </Loading>
+                            <ErrorFallback>
+                                    <p>An error occurred</p>
+                            </ErrorFallback>
+                    </Feature>
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/plan">Plan</NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink style={{ color: "white" }} tag={Link} to="/adoption">Adoption</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink style={{ color: "white" }} tag={Link} to="/booking">Booking</NavLink>
-                    </NavItem>
+                    <Feature>
+                            <On expression={feature("haveAdoptions")}>
+                                    <p>Adoptions is enabled</p>
+                            <NavItem>
+                                <NavLink style={{ color: "white" }} tag={Link} to="/adoption">Adoption</NavLink>
+                            </NavItem>
+                             </On>
+                            <Default>
+                                    <p></p>
+                            </Default>
+                            <Loading>
+                                    <p>Loading...</p>
+                            </Loading>
+                            <ErrorFallback>
+                                    <p>An error occurred</p>
+                            </ErrorFallback>
+                    </Feature>
+                    
+                    <Feature>
+                            <On expression={feature("havePetHotel")}>
+                                    <p>Pet Hotel is enabled</p>
+                            <NavItem>
+                                <NavLink style={{ color: "white" }} tag={Link} to="/booking">Booking</NavLink>
+                             </NavItem>
+                             </On>
+                            <Default>
+                                    <p></p>
+                            </Default>
+                            <Loading>
+                                    <p>Loading...</p>
+                            </Loading>
+                            <ErrorFallback>
+                                    <p>An error occurred</p>
+                            </ErrorFallback>
+                    </Feature>
+
                 </>
             )
         }
