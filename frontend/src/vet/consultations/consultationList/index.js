@@ -20,6 +20,8 @@ export default function VetConsultationList() {
   const user = tokenService.getUser();
   const jwt = tokenService.getLocalAccessToken();
 
+  const userRole = user.roles[0];
+
   function handleFilter(event) {
     const value = event.target.value;
     let filteredConsultations;
@@ -45,7 +47,9 @@ export default function VetConsultationList() {
   }
 
   function getConsultationList(consultations) {
-    return consultations.map((c) => {
+    let displayedConsultations;
+    if(userRole === "VET") displayedConsultations = consultations.filter(c => !c.isClinicComment);
+    return displayedConsultations.map((c) => {
       return (
         <tr key={c.id}>
           <td>{c.title}</td>

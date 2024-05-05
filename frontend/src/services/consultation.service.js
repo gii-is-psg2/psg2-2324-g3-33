@@ -3,9 +3,10 @@ import { Button, ButtonGroup } from "reactstrap";
 import deleteFromList from "../util/deleteFromList";
 
 class ConsultationService {
-    getConsultationList([consultations, setConsultations], [filtered, setFiltered], [alerts, setAlerts], setMessage, setVisible, plan = null) {
+    getConsultationList([consultations, setConsultations], [filtered, setFiltered], [alerts, setAlerts], setMessage, setVisible, plan, userRole) {
         let displayedConsultations;
-        if (filtered.length > 0) displayedConsultations = filtered;
+        if (userRole ===  "CLINIC_OWNER") displayedConsultations = consultations.filter(c => c.isClinicComment);
+        else if (filtered.length > 0) displayedConsultations = filtered;
         else displayedConsultations = consultations;
         return displayedConsultations.map((c) => {
             return (

@@ -28,6 +28,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import io.github.isagroup.filters.RenewTokenFilter;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
@@ -43,6 +45,7 @@ public class SecurityConfiguration {
 
 	private static final String ADMIN = "ADMIN";
 	private static final String CLINIC_OWNER = "CLINIC_OWNER";
+	
 	
 
 	@Bean
@@ -64,7 +67,7 @@ public class SecurityConfiguration {
 			.requestMatchers("/api/v1/clinicOwners/all").hasAuthority(ADMIN)
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/clinicOwners/**")).hasAnyAuthority(ADMIN, CLINIC_OWNER)
 			.requestMatchers(AntPathRequestMatcher.antMatcher(HttpMethod.DELETE, "/api/v1/consultations/**")).hasAuthority(ADMIN)
-			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/owners/**")).hasAuthority(ADMIN)
+			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/owners/**")).permitAll()
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/visits/**")).authenticated()			
 			.requestMatchers(HttpMethod.GET, "/api/v1/pets/stats").hasAuthority(ADMIN)
 			.requestMatchers("/api/v1/pets").authenticated()
@@ -75,6 +78,8 @@ public class SecurityConfiguration {
 			.requestMatchers(AntPathRequestMatcher.antMatcher(HttpMethod.GET, "/api/v1/vets/**")).authenticated()
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/vets/**")).hasAnyAuthority(ADMIN, "VET", CLINIC_OWNER) 
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
+			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/adoptions/**")).permitAll()
+			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/bookings/**")).permitAll()
 			.anyRequest().authenticated())					
 			
 			.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);		
@@ -84,6 +89,11 @@ public class SecurityConfiguration {
 	@Bean
 	public AuthTokenFilter authenticationJwtTokenFilter() {
 		return new AuthTokenFilter();
+	}
+	
+	@Bean
+	public RenewTokenFilter renewTokenFilter() {
+		return new RenewTokenFilter();
 	}
 
 	@Bean
