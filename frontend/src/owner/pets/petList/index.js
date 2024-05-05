@@ -130,7 +130,7 @@ export default function OwnerPetList() {
             <p>Loading...</p>
           </Loading>
           <ErrorFallback>
-            <p>An error occurred</p>
+            <p>An error occurred!</p>
           </ErrorFallback>
         </Feature>
         {pets.length > 0 ? (
