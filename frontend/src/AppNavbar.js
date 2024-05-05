@@ -76,9 +76,6 @@ function AppNavbar() {
                                     <p></p>
                             </ErrorFallback>
                     </Feature>
-                    <NavItem>
-                        <NavLink style={{ color: "white" }} tag={Link} to="/plan">Plan</NavLink>
-                    </NavItem>
                     <Feature>
                             <On expression={feature("haveAdoptions")}>
                             <NavItem>
