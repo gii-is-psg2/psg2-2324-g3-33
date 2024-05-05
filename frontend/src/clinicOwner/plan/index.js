@@ -3,35 +3,35 @@ import { BsDot, BsCarFront, BsFillAirplaneEnginesFill } from "react-icons/bs";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { ImTruck } from "react-icons/im";
 import "../../static/css/pricing/pricingPage.css";
-
+import { fetchWithPricingInterceptor } from "pricing4react";
 export default function PricingPlan () {
 
   const [plan, setPlan] = useState(null);
-  const [owner, setOwner] = useState({});
+  const [clinicOwner, setClinicOwner] = useState({});
   const [message, setMessage] = useState(null);  
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
   
   useEffect(()=>{ setUp();},[]);
   
   async function setUp(){
-    const myowner = await (
-      await fetch(`/api/v1/plan`, {
+    const myclinicowner = await (
+      await fetchWithPricingInterceptor(`/api/v1/plan`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
       })
     ).json();
-    if (myowner.message) setMessage(myowner.message);
+    if (myclinicowner.message) setMessage(myclinicowner.message);
     else{
-      setPlan(myowner.clinic.plan);
-      setOwner(myowner);
+      setPlan(myclinicowner.plan);
+      setClinicOwner(myclinicowner);
     } 
   }
 
   async function changePlan(event, plan) {
     event.preventDefault();
 
-    await fetch("/api/v1/plan", {
+    await fetchWithPricingInterceptor("/api/v1/plan", {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${jwt}`,

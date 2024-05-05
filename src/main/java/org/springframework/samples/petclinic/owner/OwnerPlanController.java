@@ -18,6 +18,8 @@ package org.springframework.samples.petclinic.owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
+import org.springframework.samples.petclinic.clinicowner.ClinicOwnerService;
 import org.springframework.samples.petclinic.user.User;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,20 +35,20 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @SecurityRequirement(name = "bearerAuth")
 public class OwnerPlanController {
 
-	private final OwnerService ownerService;
+	private final ClinicOwnerService clinicOwnerService;
 	private final UserService userService;
 
 	@Autowired
-	public OwnerPlanController(OwnerService ownerService, UserService userService) {
-		this.ownerService = ownerService;
+	public OwnerPlanController(ClinicOwnerService clinicOwnerService, UserService userService) {
+		this.clinicOwnerService = clinicOwnerService;
 		this.userService = userService;
 	}
 
 	
 	@GetMapping
-    public ResponseEntity<Owner> getPlan() {
+    public ResponseEntity<ClinicOwner> getPlan() {
 		User user = userService.findCurrentUser();
-		return new ResponseEntity<>(userService.findOwnerByUser(user.getId()),HttpStatus.OK);
+		return new ResponseEntity<>(userService.findClinicOwnerByUser(user.getId()),HttpStatus.OK);
     }
 
 	// @PutMapping

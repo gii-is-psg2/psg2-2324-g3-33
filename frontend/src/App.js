@@ -5,7 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import AppNavbar from "./AppNavbar";
 import Home from "./home";
 import PrivateRoute from "./privateRoute";
-import PricingPlan from "./owner/plan";
+import PricingPlan from "./clinicOwner/plan";
 import Register from "./auth/register";
 import Login from "./auth/login";
 import Logout from "./auth/logout";
@@ -138,6 +138,7 @@ function App() {
     if (role === "CLINIC_OWNER") {
       vetRoutes = (
         <>
+          <Route path="/plan" exact={true} element={<PrivateRoute><PricingPlan /></PrivateRoute>} />
           <Route path="/owners" exact={true} element={<PrivateRoute><OwnerListClinicOwner /></PrivateRoute>} />
           <Route path="/clinics" exact={true} element={<PrivateRoute><ClinicsList /></PrivateRoute>} />
           <Route path="/pethotelRooms" exact={true} element={<PrivateRoute><PetHotelRoomList /></PrivateRoute>} />
