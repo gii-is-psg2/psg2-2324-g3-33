@@ -159,3 +159,22 @@ Las limitaciones específicas de cada plan se detallan en la siguiente tabla:
 ## 5. DURACIÓN Y TERMINACIÓN
 
 ## 6. OTROS TÉRMINOS GENERALES
+### 6.1 Uso Aceptable
+El cliente se compromete a utilizar los servicios proporcionados de manera ética y legal, sin incurrir en actividades ilegales, dañinas o que violen los derechos de terceros.
+
+### 6.2 Política de Privacidad
+Todos los datos personales recopilados y procesados en virtud de este contrato estarán sujetos a nuestra política de privacidad, la cual se puede encontrar en https://petclinic.es/politica-de-privacidad. El cliente acepta los términos de dicha política.
+
+### 6.3 Condiciones de Pago
+El cliente se compromete a cumplir con las condiciones de pago especificadas en el plan de precios seleccionado. Los pagos deben realizarse de manera oportuna y en la moneda especificada en la factura.
+
+### 6.4 Propiedad Intelectual
+Todos los derechos de propiedad intelectual relacionados con los servicios proporcionados, incluidos, entre otros, los derechos de autor, marcas comerciales y patentes, serán propiedad exclusiva de PetClinic. El cliente no adquiere ningún derecho de propiedad sobre los servicios, excepto los derechos limitados expresamente otorgados en este contrato.
+
+### 6.5 Política de Cambios
+Cualquier solicitud de cambios en los servicios debe presentarse por escrito y será evaluada por PetClinic. Nos reservamos el derecho de aceptar o rechazar dichas solicitudes a nuestra discreción.
+
+### 6.6 Ley Aplicable y Jurisdicción
+Este contrato se regirá e interpretará de acuerdo con las leyes españolas sin tener en cuenta sus conflictos de principios legales. Cualquier disputa derivada de este contrato estará sujeta a la jurisdicción exclusiva de los tribunales del españolas.
+
+Estos términos generales complementan y forman parte integral del acuerdo con el cliente establecido en este documento.
