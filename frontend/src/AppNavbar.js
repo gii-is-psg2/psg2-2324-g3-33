@@ -76,9 +76,6 @@ function AppNavbar() {
                                     <p></p>
                             </ErrorFallback>
                     </Feature>
-                    <NavItem>
-                        <NavLink style={{ color: "white" }} tag={Link} to="/plan">Plan</NavLink>
-                    </NavItem>
                     <Feature>
                             <On expression={feature("haveAdoptions")}>
                             <NavItem>
@@ -129,6 +126,9 @@ function AppNavbar() {
         if (role === "CLINIC_OWNER") {
             ownerLinks = (
                 <>
+                    <NavItem>
+                        <NavLink style={{ color: "white" }} tag={Link} to="/plan">Plan</NavLink>
+                    </NavItem>
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/clinics">Clinics</NavLink>
                     </NavItem>
