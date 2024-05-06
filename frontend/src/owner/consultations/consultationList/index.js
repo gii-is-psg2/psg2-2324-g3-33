@@ -116,7 +116,7 @@ export default function OwnerConsultationList() {
 
   async function setUp() {
     const consultations = await (
-      await fetchWithPricingInterceptor("/api/v1/consultations", {
+      await fetch("/api/v1/consultations", {
         headers: {
           Authorization: `Bearer ${jwt}`,
           "Content-Type": "application/json",
