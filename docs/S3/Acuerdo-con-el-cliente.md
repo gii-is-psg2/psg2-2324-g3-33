@@ -46,7 +46,7 @@ Este servicio permite a los propietarios de clínicas solicitar resolución de i
 
 Para la resolución de incidencias un propietario de clínica debera hacer una petición indicando la incidencia.
 
-###### 2.2.1.1.3 Codición del servicio
+###### 2.2.1.1.3 Condición del servicio
 
 Para utilizar este servicio debe ser propietario de clínica
 
