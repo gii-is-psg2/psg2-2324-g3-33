@@ -85,6 +85,14 @@ Esta incidencia I-000709 fue generada por un usuario con el plan Gold el 05-05-2
 
 Su prioridad era low, por tanto, la incidencia debía ser resuelta, como muy tarde, a las 51 horas y se resolvió en 53 horas, por lo que al siguiente pago se le aplicaría un 10% de descuento.
 
+![Incidencia I-000706](../../frontend/src/static/images/I-000706.png)
+
+Esta incidencia I-000705 fue generada por un usuario con el plan Gold el 05-05-2024 a las 12:36:32 y fue resuelta el 07-05-2024 a las 11:20:22
+
+Su prioridad era crítica, por tanto, la incidencia debía ser resuelta, como muy tarde, a las 7 horas y se resolvió en 46 horas.
+
+Por lo tanto no se consiguió cumplir con los plazos de tiempo, debiéndole una compensacion a dicho usuario que sería de un descuento del 195% en la siguientes facturas al sobrepasarse 39 horas del límite.
+
 ### 4. Conclusiones
 El plan Gold es el más recomendado para los clientes que requieran funcionalidades adicionales y deseen contar con un SLA para garantizar la calidad del servicio.
 El plan Platinum ofrece una experiencia premium con consultas en línea y soporte ampliado, siendo ideal para clientes que necesiten un nivel más alto de atención y servicio.
