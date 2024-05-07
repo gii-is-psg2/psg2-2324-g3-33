@@ -71,6 +71,13 @@ Su prioridad era alta, por tanto, la incidencia debía ser resuelta, como muy ta
 
 Por lo tanto no se consiguió cumplir con los plazos de tiempo, debiéndole una compensacion a dicho usuario que sería de un descuento del 190% en la siguiente factura al sobrepasarse 38 horas del límite. Por tanto, el siguiente pago le saldría completamente gratuito.
 
+![Incidencia I-000689](../../frontend/src/static/images/I-000689.png)
+
+Esta incidencia I-000689 fue generada por un usuario con el plan Gold el 04-05-2024 a las 18:42:57 y fue resuelta el 07-05-2024 a las 21:08:28
+
+Su prioridad era medium, por tanto, la incidencia debía ser resuelta, como muy tarde, a las 27 horas y se resolvió en 3 horas.
+
+Por lo tanto se consiguió cumplir con los plazos de tiempo.
 
 
 ### 4. Conclusiones
