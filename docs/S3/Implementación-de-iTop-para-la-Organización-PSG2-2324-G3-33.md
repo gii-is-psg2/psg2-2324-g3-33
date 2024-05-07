@@ -8,7 +8,7 @@
 
 ## 1. Captura de pantalla del portal de iTop.
 
-![Captura dle portal de iTop](Portal%20de%20iTop.png)
+![Captura del portal de iTop](../../frontend/src/static/images/Portal%20de%20iTop.png)
 
 En este caso podemos ver el portal del propietario de clínica John Doe
 
