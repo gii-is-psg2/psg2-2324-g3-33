@@ -4,8 +4,15 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.http.HttpStatus;
+import org.springframework.samples.petclinic.clinic.PricingPlan;
+import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.user.User;
+import org.springframework.samples.petclinic.user.UserRepository;
+import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class ClinicOwnerService {
@@ -47,5 +54,13 @@ public class ClinicOwnerService {
 	@Transactional
 	public void deleteById(int clinicOwnerId) throws DataAccessException {
 		clinicOwnerRepository.deleteById(clinicOwnerId);
+	}
+
+	@Transactional
+	public ClinicOwner updatePlan(PricingPlan plan, int ownerId) throws DataAccessException {
+		ClinicOwner clinicOwner = this.findByUserId(ownerId);
+		clinicOwner.setPlan(plan);
+		clinicOwnerRepository.save(clinicOwner);
+		return clinicOwner;
 	}
 }
