@@ -45,11 +45,7 @@ public class SecurityConfiguration {
 
 	private static final String ADMIN = "ADMIN";
 	private static final String CLINIC_OWNER = "CLINIC_OWNER";
-
-	@Bean
-	public RenewTokenFilter renewTokenFilter() {
-		return new RenewTokenFilter();
-	}
+	
 	
 
 	@Bean
@@ -66,7 +62,7 @@ public class SecurityConfiguration {
 			.requestMatchers("/resources/**", "/webjars/**", "/static/**", "/swagger-resources/**").permitAll()			
 			.requestMatchers( "/api/v1/clinics","/", "/oups","/api/v1/auth/**","/v3/api-docs/**","/swagger-ui.html","/swagger-ui/**").permitAll()												
 			.requestMatchers("/api/v1/developers").permitAll()												
-			.requestMatchers("/api/v1/plan").hasAuthority("OWNER")
+			.requestMatchers("/api/v1/plan").hasAuthority(CLINIC_OWNER)
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/users/**")).hasAuthority(ADMIN)
 			.requestMatchers("/api/v1/clinicOwners/all").hasAuthority(ADMIN)
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/clinicOwners/**")).hasAnyAuthority(ADMIN, CLINIC_OWNER)
@@ -93,6 +89,11 @@ public class SecurityConfiguration {
 	@Bean
 	public AuthTokenFilter authenticationJwtTokenFilter() {
 		return new AuthTokenFilter();
+	}
+	
+	@Bean
+	public RenewTokenFilter renewTokenFilter() {
+		return new RenewTokenFilter();
 	}
 
 	@Bean

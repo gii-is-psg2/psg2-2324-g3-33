@@ -115,7 +115,7 @@ Para utilizar este servicio debe ser propietario de clínica
 
 ### 3.4. Niveles SLA
 
-- Plan avanzado
+- Plan gold
 Disponibilidad: 97%
 
 | Prioridad | TTO (h) | TTR (h) |
@@ -124,7 +124,7 @@ Disponibilidad: 97%
 | Media  | 13  | 27  |
 | Baja  | 27  | 51  |
 
-- Plan premium
+- Plan platinum
 Disponibilidad: 99%
 
 | Prioridad | TTO (h) | TTR (h) |
@@ -150,13 +150,24 @@ Petclinic ha implementado una serie de planes de precio con el fin de brindar be
 
 Las limitaciones específicas de cada plan se detallan en la siguiente tabla:
 
-| Plan     | Número de Mascotas | Número de Clínicas | Número de Veterinarios | Número de tipos de mascotas | Hotel de Mascotas | Adopciones | Número de visitas mensuales | Consultas            | SLA |Precio x mes|
-|----------|---------------------|---------------------|-------------------------|-----------------------------|----------------|------------|-----------------------------|----------------------|-----|-----|
-| Básico   | 10                  | 1                   | 2                       | 3                           | ×              | ×          | 4                           | Presencial           | ×   |9,99€
-| Oro      | 20                  | 5                   | 4                       | 6                           | ✓              | ✓          | 8                           | Presencial           | ✓   |19,99€
-| Platino  | 50           | 10           | 10               | 15                   | ✓              | ✓          | 15                  | Presencial y en línea | ✓   |29,99€
+| Plan | Número de Mascotas | Hotel de Mascotas |Adopciones | Número de visitas por mes y por mascota | Consultas online            | SLA |Precio mensual
+|----------|---------------------|---------------------|-------------------------|-----------------------------|----------------|------------|------------------------
+| Básico   | 2 | × | × | 1 | × |×|9,99€
+| Oro      | 4 | ✓ | ✓ | 3 | × | ✓ |19,99€
+| Platino  | 7 | ✓ | ✓ | 7 | ✓ | ✓ |29,99€
 
+## 5. DURACIÓN Y TERMINACIÓN 
 
-## 5. DURACIÓN Y TERMINACIÓN
+El presente Acuerdo entre el Cliente y Petclinic tiene una duración específica y claramente definida, abarcando hasta el 15 de julio de 2024. Esta disposición se ha establecido con el propósito de asegurar la estabilidad y continuidad en la prestación del servicio ofrecido por PetClinic hasta la fecha mencionada, proporciona un marco claro para ambas partes, permitiendo una gestión eficiente de los recursos y una relación contractual transparente. 
+
+El Acuerdo entre el Cliente y PetClinic tiene una duración específica y claramente definida hasta el 15 de julio de 2024, con el objetivo de mantener la estabilidad y continuidad en la prestación del servicio. Esta disposición establece un marco transparente para ambas partes, facilitando una gestión eficiente de recursos y una relación contractual clara.
+
+La especificación de la duración del contrato ofrece una base sólida para el desarrollo de las interacciones comerciales y operativas entre el Cliente y PetClinic. Al fijar una fecha concreta, se asegura al Cliente que los servicios estarán disponibles hasta ese momento, evitando interrupciones que puedan afectar el uso de la plataforma PetClinic.
+
+Es importante resaltar que el Acuerdo puede ser rescindido antes de su vencimiento si alguna de las partes incumple los términos y condiciones. Las razones de terminación pueden incluir incumplimiento de los términos, violación de la ley o condiciones específicas establecidas en el Acuerdo.
+
+Ambas partes deben estar conscientes de las implicaciones de la terminación del contrato y estar preparadas para actuar adecuadamente si surge la necesidad. La terminación del contrato no solo finaliza la relación entre el Cliente y PetClinic, sino que también puede implicar la resolución de disputas y la liquidación de obligaciones pendientes.
+
+La duración y terminación del contrato son aspectos cruciales de la relación comercial, garantizando continuidad y estabilidad en la prestación del servicio, y proporcionando mecanismos para abordar problemas o incumplimientos durante la relación contractual.
 
 ## 6. OTROS TÉRMINOS GENERALES

@@ -19,6 +19,8 @@ import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import io.github.isagroup.annotations.PricingPlanAware;
+
 @Service
 public class ConsultationService {
 
@@ -59,6 +61,7 @@ public class ConsultationService {
 		return this.consultationRepository.findAllByClinicId(clinicId);
 	}
 
+	@PricingPlanAware(featureName = "haveOnlineConsultation")
 	@Transactional
 	public Consultation saveConsultation(Consultation consultation) throws DataAccessException {
 		consultationRepository.save(consultation);
