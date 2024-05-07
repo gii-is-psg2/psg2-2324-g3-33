@@ -79,6 +79,7 @@ Su prioridad era medium, por tanto, la incidencia debía ser resuelta, como muy 
 
 Por lo tanto se consiguió cumplir con los plazos de tiempo.
 
+![Incidencia I-000689](../../frontend/src/static/images/I-000689.png)
 
 ### 4. Conclusiones
 El plan Gold es el más recomendado para los clientes que requieran funcionalidades adicionales y deseen contar con un SLA para garantizar la calidad del servicio.
