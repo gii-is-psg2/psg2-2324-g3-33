@@ -28,7 +28,7 @@ Esta servicio ofrece el poder resgitras tus mascotas, registar tu clinica, regit
 
 Para poder acceder a los servicios tinenes que estar loggeado en la página de PetClinic y acceder a ellos a trave de la barra de navegación.
 
-#### 2.1.3 Codición del servicio
+#### 2.1.3 Condición del servicio
 
 Para usar este servicio tienes que estar registrado en la página de PetClinic.
 
@@ -46,7 +46,7 @@ Este servicio permite a los propietarios de clínicas solicitar resolución de i
 
 Para la resolución de incidencias un propietario de clínica debera hacer una petición indicando la incidencia.
 
-###### 2.2.1.1.3 Codición del servicio
+###### 2.2.1.1.3 Condición del servicio
 
 Para utilizar este servicio debe ser propietario de clínica
 
@@ -60,7 +60,7 @@ Este servicio permite a los propietarios enviar solicitudes de usuario.
 
 Para el envio de solicitudes de usuario un propietario de clínica debera hacer una petición la solicitud de usuario.
 
-###### 2.2.1.1.3 Codición del servicio
+###### 2.2.1.1.3 Condición del servicio
 
 Para utilizar este servicio debe ser propietario de clínica
 
@@ -74,7 +74,7 @@ Este servicio permite a los propietarios de clínicas solicitar estimaciones de 
 
 Para la solicitud de estimaciones de cambios un propietario de clínica debera hacer una petición indicando la estimación del cambio.
 
-###### 2.2.1.1.3 Codición del servicio
+###### 2.2.1.1.3 Condición del servicio
 
 Para utilizar este servicio debe ser propietario de clínica
 
