@@ -4,12 +4,31 @@ import { Link } from 'react-router-dom';
 import tokenService from './services/token.service';
 import jwt_decode from "jwt-decode";
 import { Feature, On, Default,ErrorFallback, Loading, feature } from "pricing4react";
+import useFetchState from './util/useFetchState';
+
 
 function AppNavbar() {
     const [roles, setRoles] = useState([]);
     const [username, setUsername] = useState("");
+    const [visible, setVisible] = useState(false);
+    const [message, setMessage] = useState(null); 
     const jwt = tokenService.getLocalAccessToken();
     const [collapsed, setCollapsed] = useState(true);
+    const [associatedPlan, setAssociatedPlan] = useState("");
+    const [vet, setVet] = useFetchState(
+        [],
+        `/api/v1/vets`,
+        jwt,
+        setMessage,
+        setVisible
+    );
+    const [owner, setOwner] = useFetchState(
+        [],
+        `/api/v1/owners`,
+        jwt,
+        setMessage,
+        setVisible
+    );
 
     const toggleNavbar = () => setCollapsed(!collapsed);
 
@@ -20,11 +39,34 @@ function AppNavbar() {
         }
     }, [jwt])
 
+    useEffect(() => {
+        if(vet.length > 0){
+            for(let i = 0; i < vet.length; i++){
+                if(vet[i].user.username === username){
+                    setAssociatedPlan(vet[i].clinic.plan);
+                    break;
+                }
+            }
+        }
+    }, [vet])
+
+    useEffect(() => {
+        if(owner.length > 0){
+            for(let i = 0; i < owner.length; i++){
+                if(owner[i].user.username === username){
+                    setAssociatedPlan(owner[i].clinic.plan);
+                    break;
+                }
+            }
+        }  
+    }, [owner]) 
+
     let adminLinks = <></>;
     let ownerLinks = <></>;
     let userLinks = <></>;
     let userLogout = <></>;
     let publicLinks = <></>;
+    let plans = <></>;
 
     roles.forEach((role) => {
         if (role === "ADMIN") {
@@ -110,16 +152,26 @@ function AppNavbar() {
                             </ErrorFallback>
                     </Feature>
 
+                    <NavbarText style={{ color: "white" }} className="justify-content-end">{associatedPlan}</NavbarText>
+
                 </>
             )
+
+            plans = (
+                <NavbarText style={{ color: "white" }} className="justify-content-end"> Plan - {associatedPlan}</NavbarText>
+            )
         }
-        if (role === "VET") {
+        if (role === "VET") { 
             ownerLinks = (
                 <>
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/consultations">Consultations</NavLink>
                     </NavItem>
                 </>
+            )
+
+            plans = (
+                <NavbarText style={{ color: "white" }} className="justify-content-end"> Plan - {associatedPlan}</NavbarText>
             )
         }
 
@@ -206,6 +258,7 @@ function AppNavbar() {
                         {ownerLinks}
                     </Nav>
                     <Nav className="ms-auto mb-2 mb-lg-0" navbar>
+                        {plans}
                         {publicLinks}
                         {userLogout}
                     </Nav>
