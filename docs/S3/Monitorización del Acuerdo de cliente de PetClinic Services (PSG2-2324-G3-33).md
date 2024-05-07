@@ -55,13 +55,21 @@ Para este plan de precio la estimación de tiempo era la siguiente:
 
 ### 3. Incidencias
 
-![](../../frontend/src/static/images/I-000705.JPG)
+![Incidencia I-000705](../../frontend/src/static/images/I-000705.JPG)
 
 Esta incidencia I-000705 fue generada por un usuario con el plan Gold el 05-05-2024 a las 12:29:25 y fue resuelta el 07-05-2024 a las 17:29:01
 
 Su prioridad era baja, por tanto, la incidencia debía ser resuelta, como muy tarde, a las 51 horas y se resolvió en 52 horas.
 
 Por lo tanto no se consiguió cumplir con los plazos de tiempo, debiéndole una compensacion a dicho usuario que sería de un descuento del 5% en la siguiente factura al sobrepasarse una hora del límite.
+
+![Incidencia I-000730](../../frontend/src/static/images/I-000730.JPG)
+
+Esta incidencia I-000730 fue generada por un usuario con el plan Gold el 05-05-2024 a las 21:13:08 y fue resuelta el 07-05-2024 a las 18:16:12
+
+Su prioridad era alta, por tanto, la incidencia debía ser resuelta, como muy tarde, a las 7 horas y se resolvió en 45 horas.
+
+Por lo tanto no se consiguió cumplir con los plazos de tiempo, debiéndole una compensacion a dicho usuario que sería de un descuento del 190% en la siguiente factura al sobrepasarse 38 horas del límite. Por tanto, el siguiente pago le saldría completamente gratuito.
 
 
 
