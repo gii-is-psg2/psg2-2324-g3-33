@@ -25,11 +25,13 @@
 ### Historias de Usuario
 | ID | Historia de Usuario |    Puntos de Historia   | Responsable |
 |----|--------------------------|--------------------|-------------|
-| 1 | Informes      |    50     |  Diego Manzanos Anento, Alejandro Vargas Muñiz, Luis Giraldo Santiago, Alejandro Sevillano Barea, Alberto Escobar Sánchez  |
-| 2 | Gestión de incidencias    |    10     | Alejandro Vargas Muñiz, Luis Giraldo Santiago|
-| 3 | Integración framework y configuración|    10     | Luis Giraldo Santiago, Alejandro Sevillano Barea|
-| 4 | Análisis de capacidad      |    20     |  Diego Manzanos Anento, Alejandro Vargas Muñiz, Luis Giraldo Santiago, Alejandro Sevillano Barea, Alberto Escobar Sánchez  |
-| 5 | Customer Agreement|    15     | Diego Manzanos Anento,Luis Giraldo Santiago, Alejandro Sevillano Barea, Alberto Escobar Sánchez|
+| 1 | Resolución de incidencias    |   50  |  Diego Manzanos Anento, Alejandro Vargas Muñiz, Luis Giraldo Santiago, Alejandro Sevillano Barea, 
+| 2 | Informes      |    50     |  Diego Manzanos Anento, Alejandro Vargas Muñiz, Luis Giraldo Santiago, Alejandro Sevillano Barea, 
+Alberto Escobar Sánchez  |
+| 3 | Gestión de incidencias    |    10     | Alejandro Vargas Muñiz, Luis Giraldo Santiago|
+| 4 | Integración framework y configuración|    10     | Luis Giraldo Santiago, Alejandro Sevillano Barea|
+| 5 | Análisis de capacidad      |    20     |  Diego Manzanos Anento, Alejandro Vargas Muñiz, Luis Giraldo Santiago, Alejandro Sevillano Barea, Alberto Escobar Sánchez  |
+| 6 | Customer Agreement|    15     | Diego Manzanos Anento,Luis Giraldo Santiago, Alejandro Sevillano Barea, Alberto Escobar Sánchez|
 
 
 
@@ -55,5 +57,10 @@
 | 17  |  Requisitos de SLA | Diego Manzanos Anento    |
 | 18  | Métricas de SLA | Alejandro Vargas Muñiz    |
 | 19  | Duración y extinción del contrato | Diego Manzanos Anento    |
-| 20  | Condiciones de los planes | Alejandro Sevillano Barea  |
-| 21  | Servicios asociados y descripción  | Luis Giraldo Santiago   |
+| 20  | Condiciones de los planes | Alejandro Sevillano Barea  |  |
+| 21  | Servicios asociados y descripción  | Luis Giraldo Santiago |
+| 22  | Extensiones basadas en API  | Alejandro Sevillano Barea  |
+| 23  | Plan de actualización a Clínica 3  |  Alejandro Vargas Muñiz |
+| 24  | Eliminar la página "Plan" para dueños de mascotas |  Alberto Escobar Sánchez  |
+| 25 | Identificar el plan actual  | Diego Manzanos Anento |
+| 26 | Descripción de plan de precios | Luis Giraldo Santiago | 
