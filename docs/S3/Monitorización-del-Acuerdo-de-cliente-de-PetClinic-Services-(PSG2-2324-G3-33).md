@@ -79,7 +79,7 @@ Su prioridad era medium, por tanto, la incidencia debía ser resuelta, como muy 
 
 Por lo tanto se consiguió cumplir con los plazos de tiempo.
 
-![Incidencia I-000709](../../frontend/src/static/images/I-000709.png)
+![Incidencia I-000709](../../frontend/src/static/images/I-000709.jpg)
 
 Esta incidencia I-000709 fue generada por un usuario con el plan Gold el 05-05-2024 a las 13:23:36 y fue resuelta el 07-05-2024 a las 18:27:26
 
