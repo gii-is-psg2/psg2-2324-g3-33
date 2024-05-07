@@ -1,4 +1,17 @@
-# 1. TCO
+# Análisis-de-la-capacidad-y-el-riesgo-de-PetClinic-Services-(PSG2-2324-G3-33)
+![Logo de la ETSII](../../frontend/src/static/images/ogo-ETSII-US-Vertical-Color.png.png)
+
+## Índice
+
+1. Introducción
+2. TCO
+
+### 1. Introducción
+
+El informe se estructurará de la siguiente manera:
+Inicialmente, se realiza una estimación razonada y plenamente explicada del TCO del servicio incluido en la CA, incluyendo, entre otros aspectos, el OpEx y el CapEx, considerando que el servicio.
+
+### 2. TCO
 El TCO(Total Cost of Ownership) considera todos los costes asociados con la propiedad, operación y mantenimiento de un producto, sistema, servicio o
 activo durante todo su ciclo de vida. Incluye los costes directos e indirectos incurridos durante todo el período de propiedad. Para estimar este coste se ha tenido en cuenta lo siguiente.
 En primer lugar se tienen en cuenta los gastos en capital, es decir, aquellos asociados con la adquisición, el mantenimiento o la mejora de activos fijos.
