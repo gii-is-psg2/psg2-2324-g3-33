@@ -1,5 +1,7 @@
 # Implementación de iTop para la Organización PSG2-2324-G3-33
 
+![Logo de la ETSII](logo-ETSII-US-Vertical-Color.png)
+
 ## Indice
 
 1. Captura de pantalla del portal de iTop.
@@ -8,7 +10,7 @@
 
 ## 1. Captura de pantalla del portal de iTop.
 
-![Captura dle portal de iTop](Portal%20de%20iTop.png)
+![Captura del portal de iTop](Portal%20de%20iTop.png)
 
 En este caso podemos ver el portal del propietario de clínica John Doe
 
@@ -22,17 +24,25 @@ En la pantalla de Home se puede ver lo que hay en la imagen
 
 En esta pantalla se crear las incidencias y las solicitudes de servicio.
 
+![Captura del New requests de iTop](Cap%20new%requests%20iTop.png)
+
 ### 1.1.3 Ongoing requests
 
-En esta pantalla se puede ver el estado de las incidencias y las solicitudes de servicio.
+En esta pantalla se puede ver el estado de las incidencias y las solicitudes de servicio.4
+
+![Captura del Ongoing requests de iTop](Cap%Ongoing%requests%20iTop.png)
 
 ### 1.1.4 FAQ
 
 En esta pantalla se puede ver preguntas frecuentes que ya han sido contestadas.
 
+![Captura del FAQ de iTop](Cap%FAQ%20iTop.png)
+
 ### 1.1.5 Closed requests
 
 En esta pantalla se ver las incidencias y las solicitudes de servicio acabadas.
+
+![Captura del Closed requests de iTop](Cap%Closed%requests%20iTop.png)
 
 
 ## 2. Dificultades que se encontradas al configurar iTop.
