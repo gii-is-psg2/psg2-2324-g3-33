@@ -79,6 +79,11 @@ Su prioridad era medium, por tanto, la incidencia debía ser resuelta, como muy 
 
 Por lo tanto se consiguió cumplir con los plazos de tiempo.
 
+![Incidencia I-000709](../../frontend/src/static/images/I-000709.png)
+
+Esta incidencia I-000709 fue generada por un usuario con el plan Gold el 05-05-2024 a las 13:23:36 y fue resuelta el 07-05-2024 a las 18:27:26
+
+Su prioridad era low, por tanto, la incidencia debía ser resuelta, como muy tarde, a las 51 horas y se resolvió en 53 horas, por lo que al siguiente pago se le aplicaría un 10% de descuento.
 
 ### 4. Conclusiones
 El plan Gold es el más recomendado para los clientes que requieran funcionalidades adicionales y deseen contar con un SLA para garantizar la calidad del servicio.
