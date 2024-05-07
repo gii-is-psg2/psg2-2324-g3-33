@@ -1,6 +1,6 @@
 # Acuerdo con el Cliente
 
-![Logo de la ETSII](logo-ETSII-US-Vertical-Color.png)
+![Logo de la ETSII](../../frontend/src/static/images/ogo-ETSII-US-Vertical-Color.png.png)
 
 ## Indice
 
@@ -46,7 +46,7 @@ Este servicio permite a los propietarios de clínicas solicitar resolución de i
 
 Para la resolución de incidencias un propietario de clínica debera hacer una petición indicando la incidencia.
 
-###### 2.2.1.1.3 Condición del servicio
+###### 2.2.1.1.3 Codición del servicio
 
 Para utilizar este servicio debe ser propietario de clínica
 
@@ -111,26 +111,50 @@ Disponibilidad: 97%
 
 | Prioridad | TTO (h) | TTR (h) |
 |-----------|-----------|-----------|
-| Alta  | 4  | 7  |
-| Media  | 13  | 27  |
-| Baja  | 27  | 51  |
+| Alta  | 0-4  | 0-7  |
+| Media  | 4-13  | 7-27  |
+| Baja  | 13-27  | 27-51  |
 
 - Plan platinum
 Disponibilidad: 99%
 
 | Prioridad | TTO (h) | TTR (h) |
 |-----------|-----------|-----------|
-| Alta  | 1  | 4  |
-| Media  | 4  | 7  |
-| Baja  | 13  | 27  |
+| Alta  | 0-1  | 0-4  |
+| Media  | 1-4  | 4-7  |
+| Baja  | 4-13  | 7-27  |
 
 #### 3.4.1. Resolución de peticiones de usuario y cambios e incidentes
+- PLAN BASIC
+No tiene un Acuerdo de Nivel de Servicio (SLA)
+- PLAN GOLD
+No se les ofrece soporte para la creación de peticiones de usuario ni peticiones de cambio, sin embargo, sí que pueden añadir aquellos incidentes con los que se encuentren. 
+- PLAN PLATINUM
+Se les ofrece la creación tanto de peticiones de usuario y de cambios como la de incidentes.
+
+#### 3.4.2. Resolución de peticiones de usuario y cambios e incidentes
+El servicio PetClinic4CO permite gestionar distintos incidentes y peticiones y que se notifiquen por parte de los usuarios. Se deben seguir los siguientes pasos para resolverlos.
+- 1. Investigación y diagnóstico del incidente o petición.
+El objetivo de la empresa es solucionar los problemas lo más rápido posible. Para ello es necesario analizarlos y estudiar su raíz para resolverlo de forma más fácil.
+Además pueden aparecer varios problemas cuya causa sea la misma.
+- 2. Priorización del incidente o petición.
+Es necesaria la priorización del incidente, ya que pueden surgir varios problemas en un instante concreto, por lo tanto, se irán resolviendo los problemas según su prioridad.
+Esto se muestra en la siguiente tabla.
+
+|  |  | Impacto |  |  |
+|-----------|-----------|-----------|-----------|-----------|
+|     | Dato 1    | Departamento    | Servicio    | Persona    |
+|     | Crítica    | Crítica    | Crítica    | Alta    |
+| Urgencia    | Alta    | Crítica   | Alta   | Media   |
+|     | Media   | Alta   | Media   | Baja   |
+|     | Baja   | Media   | Media   | Baja   |
+
+
 
 ### 3.5. Compensaciones
 
-- TTO con prioridad por debajo de la esperada: Se compensará con un 15% de descuento en la siguiente factura, por cada nivel de prioridad inferior al esperado.
-- TTR con prioridad por debajo de la esperada: Se compensará con un 15% de descuento en la siguiente factura, por cada nivel de prioridad inferior al esperado.
-- Disponibilidad por debajo de la esperada: Se compensará con un 15% de descuento en la siguiente factura, por cada 1% por debajo del porcentaje de disponibilidad esperado.
+- Tiempos de respuesta (TTR) por debajo de lo esperado: En caso de que el tiempo de resolución de incidencias (TTR) exceda el límite acordado, se aplicará una compensación en la siguiente factura de renovación de suscripción al plan. Por cada hora adicional más allá del tiempo establecido, se otorgará un descuento del 5% en la siguiente factura.
+- Disponibilidad por debajo de lo esperado: En caso de que el nivel de disponibilidad del servicio sea inferior al esperado, se aplicará una compensación en la siguiente factura de renovación de suscripción al plan. Por cada 1% por debajo del porcentaje de disponibilidad acordado, se otorgará un descuento del 15% en la siguiente factura. 
 
 Los descuentos aplicables se acumularán hasta un 50% de descuento, como máximo, en la siguiente factura.
 
