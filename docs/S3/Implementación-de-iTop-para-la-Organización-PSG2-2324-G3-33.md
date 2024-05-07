@@ -47,9 +47,69 @@ En esta pantalla se ver las incidencias y las solicitudes de servicio acabadas.
 
 ## 2. Dificultades que se encontradas al configurar iTop.
 
-Durante la configuración de iTop, encontramos dificultades a la hora de definir bien los servicios y los sub servicios, ya que no creabamos y no conseguíamos que se asociaran bien a las clientes. Para solucionar este problemas, repasamos la diapositiva S3b - Tareas a realizar en iTop S3 - Updated task description, colgada en enseñanza virtual.
+### 2.1 Team
 
-Además encontramos dificultades a la hora de gestionar las incidencias creadas por lo usuarios, no conseguiamos localizarlas bien. Al vinas vimos que había que meternos en la organizacion correspondiente a cada incidencia.
+Para empezar con la configuración primero tuvimos que crear un team.
+
+Primero dar al botón de crear como indica la siguente imagen.
+
+![Captura de donde crear un nuevo team](Cap-base-contact.png)
+
+Luego poner que queremos crear un team.
+
+![Captura de selección de team](Cap-crear-team.png)
+
+En la pestaña de member añadir a los integrantes del equipo.
+
+![Captura de selección de miembros](Cap-agregar-miembros.png)
+
+Por último se le da a create para crear el equipo.
+
+![Captura de creado el team](Cap-team-creado.png)
+
+### 2.3 Gestión de servicios
+
+#### 2.3.1 Requisitos sobre los servicios ofrecidos
+
+Se crea el servicio PetClinic4ClinicOwner. Se va a services.
+
+![Captura de como llegar a los servicios](Cap-menu-servicio.png)
+
+Se la da a crear un servicio.
+
+![Captura de crear un servicio](Cap-crear-servicio.png)
+
+Se le añade las subcategorías.
+
+![Captura de como se añade las subcategoría](Cap-añadir-subcategoría.png)
+
+Se le añade los contactos del cliente.
+
+![Captura de como se añade los contactos del cliente](Cap-añadir-customer.png)
+
+Se crea el nuevo servicio.
+
+![Captura de creado del servicio](Cap-creado-servicio.png)
+
+##### 2.3.1.1 Como crear subcategorías de servicios
+
+Para crear subcategoría de servicios nos vamos al siguente apartado.
+
+![Captura de como llegar al service subcategories](Cap-menu-subservicio.png)
+
+Se le da al botón de +. Y creamos las dos subcategorías.
+
+La categoria de Incident.
+
+![Captura de creado de la subcategoría de Incident](Cap-incident-subservicio.png)
+
+La categoria de ServiceRequests.
+
+![Captura de creado de la subcategoría de ServiceRequest](Cap-servicerequests-subservicio.png)
+
+#### 2.3.2 Requisitos sobre el ANS de los servicios ofrecidos
+
+Se crea el Acuerdo a nivel de servicio.
 
 ## 3. Funciones que faltan en iTop
 
