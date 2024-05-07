@@ -127,7 +127,7 @@ Para el al plan gold.
 
 Las propiedades.
 
-![Captura de las propiedades de un SLA](Cap-creado-SLAgold.png)
+![Captura de las propiedades de un SLA](Cap-Creado-SLAgold.png)
 
 Los SLTs.
 
@@ -141,7 +141,7 @@ Para el al plan platinum.
 
 Las propiedades.
 
-![Captura de las propiedades de un SLA](Cap-creado-SLAplatinum.png)
+![Captura de las propiedades de un SLA](Cap-Creado-SLAplatinum.png)
 
 Los SLTs.
 
