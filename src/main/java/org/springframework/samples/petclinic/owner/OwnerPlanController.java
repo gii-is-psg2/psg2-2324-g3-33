@@ -18,16 +18,21 @@ package org.springframework.samples.petclinic.owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
 import org.springframework.samples.petclinic.clinicowner.ClinicOwnerService;
 import org.springframework.samples.petclinic.user.User;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/plan")
@@ -51,11 +56,11 @@ public class OwnerPlanController {
 		return new ResponseEntity<>(userService.findClinicOwnerByUser(user.getId()),HttpStatus.OK);
     }
 
-	// @PutMapping
-	// @ResponseStatus(HttpStatus.OK)
-	// public ResponseEntity<Owner> updatePlan(@RequestBody @Valid PricingPlan plan ) {
-	// 	 User user = userService.findCurrentUser();
-	// 	 Owner owner = userService.findOwnerByUser(user.getId());
-	//      return new ResponseEntity<>(this.ownerService.updatePlan(plan,owner.getId()),HttpStatus.OK);
-	// }
+	@PutMapping
+	@ResponseStatus(HttpStatus.OK)
+	public ResponseEntity<ClinicOwner> updatePlan(@RequestBody @Valid PricingPlan plan ) {
+		 User user = userService.findCurrentUser();
+		 Owner owner = userService.findOwnerByUser(user.getId());
+	     return new ResponseEntity<>(this.clinicOwnerService.updatePlan(plan,owner.getId()),HttpStatus.OK);
+	}
 }
