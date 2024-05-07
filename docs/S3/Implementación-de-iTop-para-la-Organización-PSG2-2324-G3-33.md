@@ -111,6 +111,64 @@ La categoria de ServiceRequests.
 
 Se crea el Acuerdo a nivel de servicio.
 
+Se elige la opción de SLAs.
+
+![Captura de creado del servicio](Cap-menu-SLA.png)
+
+Ahora le damos a crear un ANS
+
+![Captura de creado del servicio](Cap-crear-SLA.png)
+
+Según nuestro acuerdo con el cliente, tenemos soporte para planes gold y platinum, así que creamos uno para cada.
+
+Para el al plan gold.
+
+Las propiedades.
+
+![Captura de creado del servicio](Cap-creado-SLAgold.png)
+
+Los SLTs.
+
+![Captura de creado del servicio](Cap-añadir-SLTgold.png)
+
+Los contratos con los clientes, en nuestro caso tenemos dos clientes, clinicOwner1 y clinicOwner2.
+
+![Captura de creado del servicio](Cap-Customer-gold.png)
+
+Para el al plan platinum.
+
+Las propiedades.
+
+![Captura de creado del servicio](Cap-creado-SLAplatinum.png)
+
+Los SLTs.
+
+![Captura de creado del servicio](Cap-añadir-SLTplatinum.png)
+
+Los contratos con los clientes, en nuestro caso tenemos dos clientes, clinicOwner1 y clinicOwner2.
+
+![Captura de creado del servicio](Cap-Customer-platinum.png)
+
+Para poder añadir los SLT, hay que crearlo, se crear de la siguente forma.
+
+Se elige la opción de SLTs.
+
+![Captura de creado del servicio](Cap-menu-SLT.png)
+
+Como en nuestro acuerdo con el cliente tenemos definidos dos planes, creamos para cada plan, un TTO y un TTR, los los tipo podrán ser o incident o service requests, el valor  y la prioridad está puesto en el CA. Ahora mostraremos un ejemplo de cada.
+
+Ejemplo de TTO
+
+![Captura de creado del servicio](Cap-TTO-gold.png)
+
+Ejemplo de TTR
+
+![Captura de creado del servicio](Cap-TTR-platinum.png)
+
+#### Requisitos sobre el contrato del servicio ofrecido
+
+
+
 ## 3. Funciones que faltan en iTop
 
 Faltan funciones en iTop para registrarse correctamente y brindar información para respaldar todas las tareas de este Sprint.
