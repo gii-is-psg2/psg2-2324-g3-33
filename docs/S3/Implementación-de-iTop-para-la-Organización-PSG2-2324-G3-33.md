@@ -24,25 +24,25 @@ En la pantalla de Home se puede ver lo que hay en la imagen
 
 En esta pantalla se crear las incidencias y las solicitudes de servicio.
 
-![Captura del New requests de iTop](Cap%20new%requests%20iTop.png)
+![Captura del New requests de iTop](Cap%20new%20requests%20iTop.png)
 
 ### 1.1.3 Ongoing requests
 
 En esta pantalla se puede ver el estado de las incidencias y las solicitudes de servicio.4
 
-![Captura del Ongoing requests de iTop](Cap%Ongoing%requests%20iTop.png)
+![Captura del Ongoing requests de iTop](Cap%20Ongoing%20requests%20iTop.png)
 
 ### 1.1.4 FAQ
 
 En esta pantalla se puede ver preguntas frecuentes que ya han sido contestadas.
 
-![Captura del FAQ de iTop](Cap%FAQ%20iTop.png)
+![Captura del FAQ de iTop](Cap%20FAQ%20iTop.png)
 
 ### 1.1.5 Closed requests
 
 En esta pantalla se ver las incidencias y las solicitudes de servicio acabadas.
 
-![Captura del Closed requests de iTop](Cap%Closed%requests%20iTop.png)
+![Captura del Closed requests de iTop](Cap%20Closed%20requests%20iTop.png)
 
 
 ## 2. Dificultades que se encontradas al configurar iTop.
