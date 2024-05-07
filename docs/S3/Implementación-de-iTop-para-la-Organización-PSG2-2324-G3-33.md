@@ -6,6 +6,8 @@
 
 1. Captura de pantalla del portal de iTop.
 2. Dificultades que se encontradas al configurar iTop.
+3. Funciones que faltan en iTop
+4. Contribuciones de cada autor
 
 
 ## 1. Captura de pantalla del portal de iTop.
@@ -113,11 +115,11 @@ Se crea el Acuerdo a nivel de servicio.
 
 Se elige la opción de SLAs.
 
-![Captura de creado del servicio](Cap-menu-SLA.png)
+![Captura de como crear un SLA](Cap-menu-SLA.png)
 
 Ahora le damos a crear un ANS
 
-![Captura de creado del servicio](Cap-crear-SLA.png)
+![Captura de creado del SLA](Cap-crear-SLA.png)
 
 Según nuestro acuerdo con el cliente, tenemos soporte para planes gold y platinum, así que creamos uno para cada.
 
@@ -125,49 +127,94 @@ Para el al plan gold.
 
 Las propiedades.
 
-![Captura de creado del servicio](Cap-creado-SLAgold.png)
+![Captura de las propiedades de un SLA](Cap-creado-SLAgold.png)
 
 Los SLTs.
 
-![Captura de creado del servicio](Cap-añadir-SLTgold.png)
+![Captura de los SLT de un SLA](Cap-añadir-SLTgold.png)
 
 Los contratos con los clientes, en nuestro caso tenemos dos clientes, clinicOwner1 y clinicOwner2.
 
-![Captura de creado del servicio](Cap-Customer-gold.png)
+![Captura de los contratos](Cap-Customer-gold.png)
 
 Para el al plan platinum.
 
 Las propiedades.
 
-![Captura de creado del servicio](Cap-creado-SLAplatinum.png)
+![Captura de las propiedades de un SLA](Cap-creado-SLAplatinum.png)
 
 Los SLTs.
 
-![Captura de creado del servicio](Cap-añadir-SLTplatinum.png)
+![Captura de los SLT de un SLA](Cap-añadir-SLTplatinum.png)
 
 Los contratos con los clientes, en nuestro caso tenemos dos clientes, clinicOwner1 y clinicOwner2.
 
-![Captura de creado del servicio](Cap-Customer-platinum.png)
+![Captura de los contratos](Cap-Customer-platinum.png)
 
 Para poder añadir los SLT, hay que crearlo, se crear de la siguente forma.
 
 Se elige la opción de SLTs.
 
-![Captura de creado del servicio](Cap-menu-SLT.png)
+![Captura de como llegar a los STL](Cap-menu-SLT.png)
 
 Como en nuestro acuerdo con el cliente tenemos definidos dos planes, creamos para cada plan, un TTO y un TTR, los los tipo podrán ser o incident o service requests, el valor  y la prioridad está puesto en el CA. Ahora mostraremos un ejemplo de cada.
 
 Ejemplo de TTO
 
-![Captura de creado del servicio](Cap-TTO-gold.png)
+![Captura de un TTO](Cap-TTO-gold.png)
 
 Ejemplo de TTR
 
-![Captura de creado del servicio](Cap-TTR-platinum.png)
+![Captura de un TTR](Cap-TTR-platinum.png)
 
-#### Requisitos sobre el contrato del servicio ofrecido
+#### 2.3.3 Requisitos sobre el contrato del servicio ofrecido
+
+Se crea el contrato de consumidor.
+
+Se elige la opción de Customer contracts.
+
+![Captura de como crear un customer contracts](Cap-menu-customer.png)
+
+Se crea una para cada organización, osease clinicOwner1 y clinicOwner2, para cada una se crea una plan para el gold y otro para el platinum.
+
+Ejemplo del clinicOwner1 con el plan gold.
+
+Las propiedades.
+
+![Captura de las propiedades de un customer contracts](Cap-creado-customergold.png)
+
+Le asociamos el servicio correspondiente
+
+![Captura de los servicios de un customer contracts](Cap-service-customergold.png)
 
 
+Ejemplo del clinicOwner2 con el plan platinum.
+
+Las propiedades.
+
+![Captura de las propiedades de un customer contracts](Cap-creado-customerplatinum.png)
+
+Le asociamos el servicio correspondiente
+
+![Captura de los servicios de un customer contracts](Cap-service-customerplatinum.png)
+
+Creación de un Delibery Model
+
+Se elige la opción Delibery models
+
+![Captura de como llegar al Delibery model](Cap-menu-delibery.png)
+
+Las propiedades.
+
+![Captura de las propiedades del delibery model](Cap-creado-delibery.png)
+
+El consumidor.
+
+![Captura del consumidor del delibery model](Cap-customer-delibery.png)
+
+Los contactos.
+
+![Captura de los contactos del delibery model](Cap-contacts-delibery.png)
 
 ## 3. Funciones que faltan en iTop
 
@@ -181,6 +228,7 @@ Esto se refiere a lo siguiente:
 
 
 ## 4. Contribuciones de cada autor
+
 |  | Alberto Escobar Sánchez | Luis Giraldo Santiago | Diego Manzanos Anento | Alejandro Sevillano Barea | Alejandro Vargas Muñiz |
 |-----------|-----------|-----------|-----------|-----------|-----------|
 | Equipo  | Dato 1.2  | Dato 1.3  | Dato 1.4  | Dato 1.5  | Dato 1.6  |
