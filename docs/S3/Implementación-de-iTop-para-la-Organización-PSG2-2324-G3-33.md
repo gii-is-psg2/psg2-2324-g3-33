@@ -26,7 +26,7 @@ En la pantalla de Home se puede ver lo que hay en la imagen
 
 En esta pantalla se crear las incidencias y las solicitudes de servicio.
 
-![Captura del New requests de iTop](C../../frontend/src/static/images/ap%20new%20requests%20iTop.png)
+![Captura del New requests de iTop](C../../frontend/src/static/images/Cap%20new%20requests%20iTop.png)
 
 ### 1.1.3 Ongoing requests
 
