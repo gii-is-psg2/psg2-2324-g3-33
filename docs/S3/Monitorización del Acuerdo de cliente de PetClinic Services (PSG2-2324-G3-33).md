@@ -1,6 +1,6 @@
 # Monitorización del Acuerdo de cliente de PetClinic Services (PSG2-2324-G3-33)
 
-![Logo de la ETSII](logo-ETSII-US-Vertical-Color.png)
+![Logo de la ETSII](../../frontend/src/static/images/ogo-ETSII-US-Vertical-Color.png.png)
 
 ## Índice
 
@@ -55,7 +55,7 @@ Para este plan de precio la estimación de tiempo era la siguiente:
 
 ### 3. Incidencias
 
-![](../../frontend\src\static\images\I-000705.JPG)
+![](../../frontend/src/static/images/I-000705.JPG)
 
 Esta incidencia I-000705 fue generada por un usuario con el plan Gold el 05-05-2024 a las 12:29:25 y fue resuelta el 07-05-2024 a las 17:29:01
 
