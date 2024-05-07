@@ -5,6 +5,7 @@
 
 1. Introducción
 2. TCO
+3. Capacidad
 
 ### 1. Introducción
 
@@ -104,3 +105,29 @@ El salario de los desarrolladores puede variar entre el 0.5 y el 3%.
 Cabe destacar que todos estos cálculos se han relizado teniendo en cuenta que se cuenta con capacidad suficiente para ofrecer el servicio a 10.000, 5.000 y 3.000 usuarios Básico, Gold y Platinum, respectivamente y que el promedio mensual de incidentes es 120, el de solicitudes 100 y RFC 2.
 
 A partir de todo lo calculado anteriormente, puede concluirse que el TCO es 113658,484€ en el caso de salario estimado por debajo y 120865€ en caso de salario estimado por encima.
+
+### 3. Capacidad
+
+Los cálculos realizados a continuación se han hecho teniendo en cuenta que nuestra aplicación usará el plan B4 de AppEngine. Basamos nuestros cálculos y estimaciones únicamente en los precios por instancia por hora, ignorando los precios asociados a la carga de memoria (en parte por ser comparativamente negligibles para nuestra aplicación, en parte por simplificar los calculos).
+
+También hay que tener en cuenta que se consumirán dos APIs. Por un lado WeatherAPI que tiene un límite de 50 peticiones por hora y por otro lado Clinic Location API la cual no tiene restricciones. 
+
+**¿Cuál es el número máximo de solicitudes por minuto que admitirá? Suponiendo una única suscripción a un plan y sin exceso.**
+
+Empleamos instancias de tipo B4 en App Engine, que utilizan escalado básico, tal que sólo se generan instancias cuando son necesarias para satisfacer el tráfico. Es dificil estimar el número de instancias que serán necesarias para suplir las peticiones generadas, al generarse automáticamente según la memoria utilizada y la latencia por petición. Carecemos de la información necesaria para hacer una estimación realista.
+Hemos estimado que 50 instancias operando 8 horas al día es una cote superior razonable.
+
+Por defecto, cada instancia puede procesar 80 peticiones de forma simultánea.
+
+De los logs de App Engine hemos encontrado que la latencia media por petición tiene una cota superior (percentil 90) de 0.2176 segundos.
+Luego una cota superior de las solicitudes por minuto sería:
+$frac{60}{0.2176}$ = 275.74 (peticiones / min)
+  $80 (peticiones / instancia) · 50 (instancias) · 275.74 = 1102 (peticiones concurrentes / min)$
+
+**¿Cuál es el costo mínimo para atender 2 solicitudes en menos de un minuto?**
+Suponiendo que una instancia sería suficiente para suplir sin problemas 2 peticiones por minuto, asumiendo que opera 8 horas al día:
+$0.2(€/instancia·h) · 1 (instancia) · 8(h/dia) = 1.6(€/día)$
+  $ 1.6 (€/día) / 24 (h/día) = 0.07 (€/h) $
+
+**¿Cuál es el tiempo mínimo para atender 200 solicitudes?**
+Sabiendo que en el despliegue actual es suficiente una instancia, y sabiendo que la cota superior actual de latencia por petición es de 0.2176 segundos, podemos atender 200 solicitudes en un periodo de 43.52 segundos.
