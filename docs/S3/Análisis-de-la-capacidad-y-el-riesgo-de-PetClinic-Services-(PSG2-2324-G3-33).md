@@ -6,6 +6,7 @@
 1. Introducción
 2. TCO
 3. Capacidad
+4. Análisis de riesgo de operación y mantenimiento
 
 ### 1. Introducción
 
@@ -131,3 +132,36 @@ $0.2(€/instancia·h) · 1 (instancia) · 8(h/dia) = 1.6(€/día)$
 
 **¿Cuál es el tiempo mínimo para atender 200 solicitudes?**
 Sabiendo que en el despliegue actual es suficiente una instancia, y sabiendo que la cota superior actual de latencia por petición es de 0.2176 segundos, podemos atender 200 solicitudes en un periodo de 43.52 segundos.
+
+### 4. Análisis de riesgo de operación y mantenimiento
+Siguiendo los parámetros dados para el análisis de riesgo de operación y mantenimiento, se tiene que:
+
+● Al ser gratis el servicio de ambas APIs implementadas, sólo se tendrá en cuenta como el precio de API externo el coste de App Engine. Como se ha indicado en nuestro análisis
+del TCO, este coste para los 24 meses es de 57.600€, lo que hace un total de 2.400€ cada mes. Teniendo en cuenta que cada 6 meses este precio puede aumentar de un 2 a
+un 10%:
+
+❖ En caso de un aumento máximo (cada 6 meses aumenta un 10%) se
+tendría que:
+3
+∑ 1.1^i * 2400 * 6
+i=0
+
+Con esto, se tendría que por App Engine debemos estimar un coste máximo de aumento de 66.830,4€
+
+❖ En caso de un aumento mínimo (cada 6 meses aumenta un 2%) se
+tendría que:
+3
+Σ 1. 02𝑖 * 2400 * 6
+𝑖=0
+
+Con esto, se tendría que por App Engine debemos estimar un coste mínimo de aumento de 59.351,16€
+
+● En cuanto al precio de los servicios de habilitación y mejora, estos pueden tener una variación del 2% al 10%. Observando el análisis del TCO, se toma como precio el coste de implementación de cambio, el cual oscila entre 8.421,12€ y 10.252,8€ a lo largo de los 24 meses.
+
+❖ En caso de tener un aumento máximo (máximo precio y un aumento de este del 10%) se tendría que: 10.252,8€ * 1,1
+Con esto, se tendría que presuponer que los servicios de habilitación y mejora pueden suponer un coste de 11.278,08€
+
+❖ En caso de tener un aumento mínimo (mínimo precio y un aumento de este del 2%) se tendría que: 8.421,12€ * 1,02
+Con esto, se tendría que presuponer que los servicios de habilitación y mejora pueden suponer un coste de 8.589,54€
+
+● Teniendo ambas cifras ya calculadas, bastaría con realizar una suma de estas para observar que deberíamos estimar un coste de aumento máximo de 78.108,48€, o un coste de aumento mínimo de 67.940,7€
