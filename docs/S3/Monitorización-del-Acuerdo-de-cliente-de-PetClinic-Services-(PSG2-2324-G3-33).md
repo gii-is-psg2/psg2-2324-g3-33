@@ -63,7 +63,7 @@ Su prioridad era baja, por tanto, la incidencia debía ser resuelta, como muy ta
 
 Por lo tanto no se consiguió cumplir con los plazos de tiempo, debiéndole una compensacion a dicho usuario que sería de un descuento del 5% en la siguiente factura al sobrepasarse una hora del límite.
 
-![Incidencia I-000730](../../frontend/src/static/images/I-000730.JPG)
+![Incidencia I-000730](../../frontend/src/static/images/I-000730.jpg)
 
 Esta incidencia I-000730 fue generada por un usuario con el plan Gold el 05-05-2024 a las 21:13:08 y fue resuelta el 07-05-2024 a las 18:16:12
 
