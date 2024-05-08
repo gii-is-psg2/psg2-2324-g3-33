@@ -5,6 +5,7 @@ import tokenService from './services/token.service';
 import jwt_decode from "jwt-decode";
 import { Feature, On, Default,ErrorFallback, Loading, feature } from "pricing4react";
 import useFetchState from './util/useFetchState';
+import contrato  from './agreements/Acuerdo-con-el-cliente.pdf';
 
 
 function AppNavbar() {
@@ -152,9 +153,8 @@ function AppNavbar() {
                             </ErrorFallback>
                     </Feature>
 
-                    <NavbarText style={{ color: "white" }} className="justify-content-end">{associatedPlan}</NavbarText>
-
                 </>
+                    
             )
 
             plans = (
@@ -205,6 +205,9 @@ function AppNavbar() {
         publicLinks = (
             <>
                 <NavItem>
+                    <NavLink style={{ color: "white" }} id="agreement" href={contrato} target="_blank">Client Agreement</NavLink>
+                </NavItem>
+                <NavItem>
                     <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
                 </NavItem>
                 <NavItem>
@@ -228,6 +231,9 @@ function AppNavbar() {
         )
         userLogout = (
             <>
+                <NavItem>
+                    <NavLink style={{ color: "white" }} id="agreement" href={contrato} target="_blank">Client Agreement</NavLink>
+                </NavItem>
                 <NavItem>
                     <NavLink style={{ color: "white" }} id="docs" tag={Link} to="/docs">Docs</NavLink>
                 </NavItem>

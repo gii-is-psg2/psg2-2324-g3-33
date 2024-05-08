@@ -4,19 +4,21 @@
 
 ## Indice
 
-1. Objeto del contrato
-2. Descripción de servicios
+1. OBJECTO DEL CONTRATO
+2. DESCRIPCION DE SERVICIOS
 3. SERVICIOS OFRECIDOS
 4. PLAN DE PRECIOS
 5. DURACIÓN Y TERMINACIÓN
 6. OTROS TÉRMINOS GENERALES
+
+___
 
 
 ## 1. OBJETO DEL CONTRATO
 
 Este documento detalla el acuerdo con el cliente, describiendo los servicios ofrecidos, su plan de precios, la duración y la terminación de estos y algunos otros téminos generales.
 
-## 2. Descripción de servicios
+## 2. DESCRIPCION DE SERVICIOS
 
 ### 2.1 Servicios de PetClinic
 
