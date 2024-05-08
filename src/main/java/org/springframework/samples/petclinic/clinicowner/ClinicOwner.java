@@ -2,15 +2,19 @@ package org.springframework.samples.petclinic.clinicowner;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.samples.petclinic.model.Person;
 import org.springframework.samples.petclinic.clinic.Clinic;
+import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.user.User;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -35,4 +39,8 @@ public class ClinicOwner extends Person{
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JsonIgnore
 	private Set<Clinic> clinics;
+
+	@Enumerated(EnumType.STRING)
+	@NotNull
+	private PricingPlan plan;
 }

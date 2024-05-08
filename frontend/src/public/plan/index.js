@@ -70,7 +70,7 @@ export default function PlanList() {
             <div className="option">
               <ul>
               <li>
-                  <BsDot color="white" /> 5 pets
+                  <BsDot color="white" /> 4 pets
                 </li>
                 <li>
                   <BsDot color="white" /> 3 visits per month and pet
@@ -109,10 +109,10 @@ export default function PlanList() {
             <div className="option">
               <ul>
               <li>
-                  <BsDot color="white" /> 10 pets
+                  <BsDot color="white" /> 7 pets
                 </li>
                 <li>
-                  <BsDot color="white" /> 5 visits per month and pet
+                  <BsDot color="white" /> 7 visits per month and pet
                 </li>
                 <li>
                   <FaCheck color="green" /> Pet Hotel
