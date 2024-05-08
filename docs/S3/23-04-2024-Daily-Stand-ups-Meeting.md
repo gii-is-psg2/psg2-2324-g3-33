@@ -1,8 +1,8 @@
 # Acta de Reunión del Proyecto psg2-2324-g3-33
 
-**Fecha:** 09/04/2024
-**Hora de inicio:** 11:30
-**Hora de finalización:** 11:40
+**Fecha:** 23/04/2024
+**Hora de inicio:** 11:05
+**Hora de finalización:** 11:15
 **Lugar:** Aula F1:30 de la Escuela Técnica Superior de Ingeniería Informática
 
 ## Asistentes
@@ -11,6 +11,7 @@
 - DIEGO MANZANOS ANENTO
 - ALEJANDRO SEVILLANO BAREA (Scrum Master)
 - ALEJANDRO VARGAS MUÑIZ 
+
 
 ## Objetivo de la Reunión
 Reunión sobre lo que hemos hecho y lo que vamos a hacer.
